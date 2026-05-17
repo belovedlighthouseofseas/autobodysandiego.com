@@ -4,6 +4,11 @@ Regional SEO authority and traffic-capture portal for San Diego auto body search
 Routes visitors to the right specialist brand: BumperFix USA, PaintFix USA,
 CollisionFix USA, CrashFix USA.
 
+> **Read first:** [`docs/brand-identity.md`](docs/brand-identity.md) is the
+> locked source of truth for everything brand-related — tone, color, logo
+> rules, taglines, conversion voice, out-of-bounds. Read it before writing
+> copy, designing assets, or adding pages.
+
 ## Stack
 
 - Static HTML, one stylesheet (`assets/styles.css`).
