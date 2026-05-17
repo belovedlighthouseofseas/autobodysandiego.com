@@ -22,8 +22,8 @@
   --accent-glow: rgba(0,157,255,0.32);
   --danger: #FF1E1E;
   --danger-bright: #FF4848;
-  --serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --display: 'Chakra Petch', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --serif: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --display: 'Orbitron', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --container: 1240px;
   --radius: 2px;

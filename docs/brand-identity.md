@@ -1,31 +1,38 @@
-# SESSION 1 — AutoBody San Diego Brand Identity Blueprint
+# SESSION 1 — AutoBody San Diego Brand Identity
 
 ## The Foundation Before Website Build
+
+> Canonical merge of both Session 1 deliverables — "Brand Identity Lockdown" (23 sections) and "Brand Identity Blueprint" (22 sections). Nothing from either is dropped. Read this before writing copy, designing assets, briefing logo work, or extending the site.
+
+---
 
 ## 1. What We Are Actually Building
 
 **AutoBody San Diego** is not being built as a regular body shop website.
 
-It is being built as a **San Diego auto body traffic headquarters**.
+It is being built as a **San Diego auto body traffic headquarters** — the regional auto body search gateway for San Diego.
 
 That means the website's purpose is not just to say:
 
 "We fix cars."
 
-The real purpose is to capture people searching for auto body repair in San Diego, organize their problem, and guide them into the right repair path.
+The real purpose is to capture people searching broadly for auto body repair in San Diego, organize their problem, and guide them into the right repair path:
 
-A normal body shop website usually has a homepage, a services page, a contact page, and some generic claims like "quality repair" or "trusted service."
+**Bumper damage** → BumperFix
+**Paint damage** → PaintFix
+**Collision damage** → CollisionFix
+**Accident / insurance confusion** → CrashFix or insurance-help page
 
-That is not enough.
+A normal body shop website usually has a homepage, a services page, a contact page, and some generic claims like "quality repair" or "trusted service." That is not enough.
 
 AutoBody San Diego must become the **front door** for multiple types of search traffic:
 
-* People with bumper damage
-* People with paint damage
-* People who were in a collision
-* People dealing with insurance
-* People looking for a body shop near them
-* People who do not know what repair they need yet
+- People with bumper damage
+- People with paint damage
+- People who were in a collision
+- People dealing with insurance
+- People looking for a body shop near them
+- People who do not know what repair they need yet
 
 The website should feel like:
 
@@ -35,786 +42,743 @@ That is the core.
 
 ---
 
-# 2. The Core Identity
+## 2. The Core Identity
 
-## Brand Name
+### Brand Name
 
 **AutoBody San Diego**
 
-## Strong Logo Format
+### Strong Logo Format
 
 **AUTOBODY**
 **SAN DIEGO**
 
-## Tagline
+### Tagline (primary, sits in the logo)
 
 **Collision • Paint • Bumper • Insurance Help**
 
-## Short Brand Promise
+### Short Brand Promise
 
 **San Diego auto body help, matched to the right repair path.**
 
-## Longer Brand Promise
+### Longer Brand Promise
 
 **AutoBody San Diego helps local drivers understand the right repair direction for bumper damage, paint damage, collision damage, and insurance-related auto body repairs.**
+
+### Internal core promise
+
+**AutoBody San Diego helps drivers move from vehicle damage confusion to repair direction.**
+
+### Short customer-facing version
+
+**Damage happens. We help you find the right repair path.**
 
 This brand should become the clean, local, high-trust gateway for people who need help but do not yet know what type of repair they actually need.
 
 ---
 
-# 3. The Strategic Role
+## 3. Strategic Role Inside the Bigger Network
 
-AutoBody San Diego should sit above the smaller specialized repair brands.
+AutoBody San Diego should sit above the smaller specialized repair brands. Think of the structure like this:
 
-The structure:
+### Master Traffic Brand
 
-## Master Traffic Brand
+**AutoBody San Diego** — captures broad organic traffic.
 
-**AutoBody San Diego**
+### Specialized Repair Paths
 
-Purpose:
+- **BumperFix USA** — bumper scratches, cracks, scuffs, dents, bumper paint damage.
+- **PaintFix USA** — paint repair, clear coat failure, fading, scratches, full paint jobs, repainting.
+- **CollisionFix USA** — collision damage, body repair, panel repair, structural concerns, bigger jobs.
+- **CrashFix USA** — accident guidance, insurance confusion, claim help, post-accident direction.
 
-Capture broad organic traffic.
+AutoBody San Diego does not need to explain the entire network immediately. At first, the customer should only feel that the website knows how to guide them. AutoBody San Diego should not overpower these brands. It should **feed** them.
 
-## Specialized Repair Paths
+The website structure should eventually allow this:
 
-**BumperFix USA**
-For bumper scratches, cracks, scuffs, dents, and bumper paint damage.
-
-**PaintFix USA**
-For paint repair, clear coat failure, fading, scratches, full paint jobs, and repainting.
-
-**CollisionFix USA**
-For collision damage, body repair, panel repair, structural concerns, and bigger jobs.
-
-**CrashFix USA**
-For accident guidance, insurance confusion, claim help, and post-accident direction.
-
-AutoBody San Diego does not need to explain the entire network immediately. At first, the customer should only feel that the website knows how to guide them.
-
-The network can be introduced later as:
-
-**Specialized repair paths for bumper, paint, collision, and insurance-related damage.**
+> Customer lands on AutoBody San Diego → chooses damage type → sees the correct repair category → fills out quote form → gets routed into the proper repair brand or service path.
 
 ---
 
-# 4. The Main Customer Problem
+## 4. The Main Customer Problem
 
 Most customers do not search like technicians.
 
 They do not say:
 
-"My thermoplastic bumper cover requires refinishing with proper substrate preparation."
+> "My thermoplastic bumper cover requires refinishing with proper substrate preparation."
 
 They say:
 
-"My bumper is scratched."
-"My car was hit."
-"My paint is peeling."
-"I need a quote."
-"I have insurance."
-"I do not know if this is repairable."
-"How much will this cost?"
-"Can I send pictures?"
-"Do I need a body shop?"
+> "My bumper is scratched."
+> "My car was hit."
+> "My paint is peeling."
+> "I need a quote."
+> "I have insurance."
+> "I do not know if this is repairable."
+> "How much will this cost?"
+> "Can I send pictures?"
+> "Do I need a body shop?"
 
 That is the language the website must speak.
 
-The website should translate customer confusion into a repair category.
+The website should translate customer confusion into a repair category:
 
-Example:
-
-Customer says:
-"My bumper is cracked."
-
-Website routes them to:
-**Bumper Repair San Diego**
-
-Customer says:
-"My clear coat is peeling."
-
-Website routes them to:
-**Paint Repair San Diego**
-
-Customer says:
-"My car was hit and I have insurance."
-
-Website routes them to:
-**Accident / Insurance Repair Help**
-
-Customer says:
-"I do not know what I need."
-
-Website routes them to:
-**Send Photos for Repair Direction**
+| Customer says | Website routes to |
+|---|---|
+| "My bumper is cracked." | Bumper Repair San Diego |
+| "My clear coat is peeling." | Paint Repair San Diego |
+| "My car was hit and I have insurance." | Accident / Insurance Repair Help |
+| "I do not know what I need." | Send Photos for Repair Direction |
 
 This is the conversion engine.
 
 ---
 
-# 5. Brand Positioning
+## 5. Primary Audience
 
-## What AutoBody San Diego Is
+The main audience is not "car enthusiasts." It is regular San Diego drivers with vehicle damage, usually in one of four conditions:
 
-AutoBody San Diego is:
+### Customer Type 1: Cosmetic Damage Customer
 
-A local repair guidance platform.
-A San Diego auto body search gateway.
-A damage-type sorting system.
-A service-routing website.
-A future SEO authority site.
-A lead-generation engine.
-A bridge between confused drivers and the right repair path.
+**Searches:** "bumper scratch repair San Diego," "fix cracked bumper near me," "paint scratch repair San Diego," "mobile bumper repair San Diego"
 
-## What AutoBody San Diego Is Not
+**Emotional state:** Wants it fixed fast. Does not want to overpay. Afraid a shop will tell them they need more work than necessary.
 
-It is not a cheap directory.
-It is not a fake "top 10 body shops" list.
-It is not a random blog.
-It is not only one shop service.
-It is not only bumper repair.
-It is not only paint repair.
-It is not only insurance help.
-It is not a generic template website.
+### Customer Type 2: Accident Customer
 
-The brand has to feel real, controlled, local, and useful.
+**Searches:** "auto body shop San Diego," "collision repair near me," "car accident repair San Diego," "body shop estimate after accident"
+
+**Emotional state:** Confused. May be dealing with insurance. Needs direction. May not know if the car is safe to drive.
+
+### Customer Type 3: Paint Job Customer
+
+**Searches:** "car paint job San Diego," "paint repair near me," "clear coat peeling repair," "full car repaint San Diego"
+
+**Emotional state:** Wants the car to look better. May be price-shopping. Wants to understand options.
+
+### Customer Type 4: Insurance Customer
+
+**Searches:** "insurance auto body repair San Diego," "body shop estimate for insurance claim," "do I have to use insurance recommended body shop," "supplement estimate auto body"
+
+**Emotional state:** Overwhelmed. Wants to know what they are allowed to do. Needs confidence.
 
 ---
 
-# 6. The Emotional Strategy
+## 6. Brand Positioning
+
+### What AutoBody San Diego IS
+
+A local repair guidance platform. A San Diego auto body search gateway. A damage-type sorting system. A service-routing website. A future SEO authority site. A lead-generation engine. A bridge between confused drivers and the right repair path. A regional auto body command center.
+
+### What AutoBody San Diego is NOT
+
+- A cheap directory.
+- A fake "top 10 body shops" list.
+- A random blog.
+- A low-trust lead-gen site.
+- A generic template website.
+- Only one shop service.
+- Only bumper repair.
+- Only paint repair.
+- Only insurance help.
+
+The brand has to feel real, controlled, local, and useful.
+
+The visitor should feel:
+
+> "This website understands what happened to my car and is helping me figure out the right next step."
+
+---
+
+## 7. The Emotional Strategy
 
 The customer usually arrives with one of four emotions:
 
-## Confusion
-
-They do not know what type of repair they need.
-
-Website response:
-
-**Start with what happened to your vehicle.**
-
-## Fear of Overpaying
-
-They are afraid a shop will upsell them.
-
-Website response:
-
-**Not every repair needs replacement or unnecessary work.**
-
-## Urgency
-
-They need a quote fast.
-
-Website response:
-
-**Send photos and get repair direction.**
-
-## Insurance Stress
-
-They are dealing with claims, estimates, supplements, or accident paperwork.
-
-Website response:
-
-**We help you understand the repair path after an accident.**
+| Emotion | What they're feeling | Website response |
+|---|---|---|
+| **Confusion** | They do not know what type of repair they need | Start with what happened to your vehicle. |
+| **Fear of overpaying** | They are afraid a shop will upsell them | Not every repair needs replacement or unnecessary work. |
+| **Urgency** | They need a quote fast | Send photos and get repair direction. |
+| **Insurance stress** | Claims, estimates, supplements, accident paperwork | We help you understand the repair path after an accident. |
 
 This is why the tone must be calm, clear, and directional.
 
 ---
 
-# 7. Brand Voice
+## 8. Brand Voice
 
 The voice should be:
 
-Direct
-Helpful
-Local
-Professional
-Confident
-Simple
-Not cheesy
-Not desperate
-Not overhyped
-Not too technical
-Not fake-corporate
+Direct · Helpful · Local · Professional · Confident · Simple
 
-## Correct Voice Example
+It should NOT be:
 
-**Not every damaged vehicle needs the same repair path. Some bumper damage can be repaired without replacing the bumper. Some paint damage may only need localized refinishing. Some collision damage needs a deeper inspection. AutoBody San Diego helps you start in the right place.**
+Cheesy · Desperate · Overhyped · Too technical · Fake-corporate
 
-## Incorrect Voice Example
+### Correct voice example
 
-**We are San Diego's #1 best auto body shop with unbeatable prices and amazing service!**
+> Not every damaged vehicle needs the same repair path. Some bumper damage can be repaired without replacing the bumper. Some paint damage may only need localized refinishing. Some collision damage needs a deeper inspection. AutoBody San Diego helps you start in the right place.
 
-That second version sounds like every other shop. It does not create authority.
+### Incorrect voice example
 
-The brand should win by being useful.
+> We are San Diego's #1 best auto body shop with unbeatable prices and amazing service!
+
+That second version sounds like every other shop. It does not create authority. The brand should win by being useful.
 
 ---
 
-# 8. Main Website Message
+## 9. Main Website Message
 
 The whole website should revolve around this message:
 
-**Tell us what happened to your vehicle. We will help you find the right auto body repair path in San Diego.**
+> **Tell us what happened to your vehicle. We will help you find the right auto body repair path in San Diego.**
 
-That sentence is the soul of the website.
-
-Everything else supports it.
+That sentence is the soul of the website. Everything else supports it.
 
 The homepage should not start with random company history. It should start with the customer's problem.
 
 ---
 
-# 9. Main Homepage Copy
+## 10. Main Homepage Copy
 
-## Hero Headline
+### Hero Headline
 
 **San Diego Auto Body Help, Matched to the Right Repair Solution**
 
-## Hero Subheadline
+### Hero Subheadline
 
 **From bumper damage and paint repair to collision work and insurance-related repairs, AutoBody San Diego helps drivers find the right repair path without confusion, pressure, or unnecessary work.**
 
-## Primary Button
+### Primary Button
 
 **Send Photos for Repair Direction**
 
-## Secondary Button
+### Secondary Button
 
 **Choose Your Repair Type**
 
-## Damage Selector Headline
+### Damage Selector Headline
 
 **What happened to your vehicle?**
 
-## Damage Selector Options
+### Damage Selector Cards (5)
 
-**My bumper is scratched, cracked, or dented**
-
-**My paint is faded, peeling, scratched, or damaged**
-
-**My vehicle was hit in a collision**
-
-**I need help with an accident or insurance claim**
-
-**I'm not sure what repair I need**
+- **My bumper is scratched, cracked, or dented**
+- **My paint is faded, peeling, scratched, or damaged**
+- **My vehicle was hit in a collision**
+- **I need help with an accident or insurance claim**
+- **I'm not sure what repair I need**
 
 This section should appear very high on the homepage.
 
 ---
 
-# 10. Visual Identity
+## 11. Visual Identity
 
-The brand should match the visual world of your existing logos but remain its own identity.
+The brand should match the visual world of the existing logos but remain its own identity.
 
-## Visual DNA
+### Visual DNA
 
-Black background.
-Chrome white lettering.
-Electric blue accent lines.
-Sharp diagonal motion slash.
-Premium automotive energy.
-Clean futuristic typography.
-High contrast.
-Fast but professional.
-Strong but not chaotic.
+- Black background
+- Chrome / metallic white lettering
+- Electric blue accent lines
+- Sharp diagonal motion slash
+- Premium automotive energy
+- Clean futuristic typography
+- High contrast
+- Glossy but clean
+- Premium but readable
+- Fast but trustworthy
 
-AutoBody San Diego should look more official than BumperFix and PaintFix because it is the regional gateway.
+AutoBody San Diego should look **more official** than BumperFix and PaintFix because it is the regional gateway.
 
 BumperFix is specialized.
 PaintFix is specialized.
 CollisionFix is specialized.
 AutoBody San Diego is the headquarters.
 
-## Color System
+### Color System
 
-### Main Background
+#### Main Background — near black
 
-Near black:
+`#050505` · `#080A0D` · `#0B0F14`
 
-`#050505`
-`#080A0D`
-`#0B0F14`
+#### Main Text — white / metallic white
 
-### Main Text
+`#FFFFFF` · `#F2F4F7` · `#DDE3EA`
 
-White / metallic white:
+#### Main Accent — electric blue
 
-`#FFFFFF`
-`#F2F4F7`
-`#DDE3EA`
+`#007BFF` · `#009DFF` · `#00AEEF`
 
-### Main Accent
+#### Secondary Accent — deep performance blue
 
-Electric blue:
+`#004CFF` · `#0057D9`
 
-`#007BFF`
-`#009DFF`
-`#00AEEF`
+#### Limited Action Accent — red
 
-### Secondary Accent
-
-Deep blue:
-
-`#004CFF`
-`#0057D9`
-
-### Limited Action Accent
-
-Red:
-
-`#FF1E1E`
-`#D60000`
+`#FF1E1E` · `#D60000` (used sparingly)
 
 Red should be used very carefully. Blue should dominate because AutoBody San Diego needs to feel helpful, local, clean, and authoritative.
 
----
+Color attribution across the brand network:
 
-# 11. Logo System Needed
-
-The first logo is strong for the hero and brand image, but the full project needs multiple versions.
-
-## Version 1: Full Hero Logo
-
-Used on homepage hero, banners, brand graphics.
-
-Includes:
-
-**AUTOBODY**
-**SAN DIEGO**
-**Collision • Paint • Bumper • Insurance Help**
-
-This can have the car silhouette, chrome letters, blue slash, and badge.
-
-## Version 2: Website Header Logo
-
-Used in the navigation bar.
-
-This needs to be simpler.
-
-Recommended format:
-
-**AutoBody San Diego**
-
-or
-
-**AUTOBODY SD**
-
-No tiny tagline. No heavy detail. It has to be readable on mobile.
-
-## Version 3: Icon Mark
-
-Used for favicon and social profile.
-
-Options:
-
-**SD** shield
-**ABSD** mark
-Blue slash inside shield
-Car roofline over SD
-
-## Version 4: Flat Logo
-
-Used for forms, documents, invoices, email signatures.
-
-No glow. No complex chrome. Just clean black/white or white/black.
-
-## Version 5: Transparent Logo
-
-Used for website overlays and graphics.
+- BumperFix can be blue.
+- CrashFix can be red.
+- PaintFix can have multicolor paint energy.
+- **AutoBody San Diego should be mostly white, black, and blue.**
 
 ---
 
-# 12. Website Architecture Direction
+## 12. Typography Direction
 
-The first version of the site should include these core pages:
+The logo can use a futuristic automotive type style. But the website needs two levels.
 
-## Main Pages
+### Display font
 
-Home
-Get a Quote
-Bumper Repair San Diego
-Paint Repair San Diego
-Collision Repair San Diego
-Accident Repair Help San Diego
-Insurance Auto Body Repair San Diego
-Service Areas
-About
-Contact
+Used for hero headlines, logo-style section headers, large service titles, buttons.
 
-## Future City Pages
+**Should feel:** Wide · Bold · Automotive · Sharp · Commanding
 
-Auto Body Repair Lemon Grove
-Auto Body Repair Spring Valley
-Auto Body Repair La Mesa
-Auto Body Repair El Cajon
-Auto Body Repair National City
-Auto Body Repair Chula Vista
-Auto Body Repair Mira Mesa
-Auto Body Repair Kearny Mesa
-Auto Body Repair Santee
-Auto Body Repair Poway
-Auto Body Repair Escondido
-Auto Body Repair Carlsbad
-Auto Body Repair Oceanside
+**Style direction:** Anton-like · Orbitron-like · Eurostile-like · Bebas Neue-like · Agency-style · Techno automotive lettering
 
-The site should be built so these city pages can scale later without redesigning everything.
+### Body font
+
+Used for paragraphs, forms, buttons, service descriptions.
+
+**Should be:** Clean · Readable · Modern · Not too futuristic · Mobile-friendly
+
+**Style direction:** DM Sans · Inter · Montserrat · Roboto Condensed · Sora
+
+### Locked combination
+
+**Display: Orbitron**
+**Body: DM Sans**
+**Mono utility (eyebrows, tags, labels): JetBrains Mono**
+
+The key rule:
+
+> The logo can be aggressive.
+> The website body text must be readable.
 
 ---
 
-# 13. SEO Foundation
+## 13. Logo System
 
-The name **AutoBody San Diego** is already an SEO asset.
+The first logo is strong as a hero / banner logo, but the project needs a full logo system.
 
-The website should target these main keyword groups.
+### Version 1: Full Hero Logo
 
-## Broad Keywords
+Used on homepage hero, banners, brand graphics. Includes:
 
-auto body San Diego
-auto body repair San Diego
-auto body shop San Diego
-body shop San Diego
-San Diego auto body repair
+- **AUTOBODY**
+- **SAN DIEGO**
+- **Collision • Paint • Bumper • Insurance Help**
 
-## Service Keywords
+Can have the car silhouette, chrome letters, blue slash, and SD badge. ✅ Already done.
 
-bumper repair San Diego
-paint repair San Diego
-collision repair San Diego
-car paint job San Diego
-auto paint repair San Diego
-accident repair San Diego
+### Version 2: Website Header Logo
 
-## Insurance Keywords
+Used in the navigation bar. Needs to be simpler.
 
-insurance auto body repair San Diego
-body shop insurance claim San Diego
-auto body estimate insurance claim
-car accident repair estimate
-insurance collision repair San Diego
+Recommended format: **AutoBody San Diego** or **AUTOBODY SD**
 
-## Photo Quote Keywords
+No tiny tagline. No heavy detail. Must be readable on mobile. ⏳ Session 2.
 
-auto body photo estimate
-send photos for body shop quote
-car repair estimate by photos
-bumper repair quote by photos
-paint repair quote by photos
+### Version 3: Icon Mark
 
-## City Keywords
+Used for favicon, mobile app-style icon, social profile.
 
-auto body repair Lemon Grove
-auto body repair Spring Valley
-auto body repair La Mesa
-auto body repair El Cajon
-auto body repair Chula Vista
-auto body repair National City
+Options: **ABSD** mark · **SD** inside shield · blue repair slash inside a black shield · simplified car roofline over "SD". ⏳ Session 2.
 
-The SEO should not feel spammy. It should be clean, natural, and useful.
+### Version 4: Plain / Flat Logo
+
+Used for documents, forms, contracts, email signature, invoices. No chrome effect, no glow — just clean vector white-on-black or black-on-white. ⏳ Future.
+
+### Version 5: Transparent PNG version
+
+Used for website overlays. ⏳ Future.
+
+### Version 6: Social Media Square
+
+Centered icon + AutoBody San Diego name. ⏳ Future.
 
 ---
 
-# 14. Core Conversion Funnel
+## 14. Website Personality
 
-The website needs a simple funnel.
+The website should feel like:
 
-## Step 1
+- A local command center
+- A repair decision system
+- A professional damage triage page
+- A clean auto body authority
+- A San Diego service gateway
 
-Customer lands on homepage.
+It should NOT feel like:
 
-## Step 2
+- A blog template
+- A directory
+- A cheap lead seller
+- A random AI-generated site
+- A cluttered shop page
+- A generic "we fix all cars" site
 
-They choose what happened:
+The website has to be useful within the first five seconds. When the visitor lands, they should immediately understand:
 
-Bumper damage
-Paint damage
-Collision damage
-Insurance help
-Not sure
-
-## Step 3
-
-They visit the matching page.
-
-## Step 4
-
-They see a simple explanation of that repair path.
-
-## Step 5
-
-They send photos.
-
-## Step 6
-
-You receive:
-
-Name
-Phone
-Vehicle year/make/model
-City
-Damage type
-Insurance or customer-pay
-Photos
-Message
-
-This makes the lead more qualified before you call them.
+1. This is about auto body repair in San Diego.
+2. I can choose the damage type.
+3. I can send photos.
+4. I can get guidance.
+5. I do not have to know the technical repair category myself.
 
 ---
 
-# 15. Quote Form Strategy
+## 15. Website Architecture
 
-The quote form should not feel like a normal contact form.
+### Main Pages
 
-It should feel like a repair intake tool.
+- Home
+- Get a Quote
+- Bumper Repair San Diego
+- Paint Repair San Diego
+- Collision Repair San Diego
+- Accident Repair Help San Diego
+- Insurance Auto Body Repair San Diego
+- Service Areas
+- About
+- Contact
 
-## Form Headline
+### City Pages
+
+- Auto Body Repair Lemon Grove
+- Auto Body Repair Spring Valley
+- Auto Body Repair La Mesa
+- Auto Body Repair El Cajon
+- Auto Body Repair National City
+- Auto Body Repair Chula Vista
+- Auto Body Repair San Diego
+- Auto Body Repair Mira Mesa
+- Auto Body Repair Kearny Mesa
+- Auto Body Repair Santee
+- Auto Body Repair Poway
+- Auto Body Repair Escondido
+- Auto Body Repair Carlsbad
+- Auto Body Repair Oceanside
+
+### Future Help Pages
+
+- How to Get an Auto Body Repair Quote From Photos
+- Bumper Repair vs Bumper Replacement
+- Paint Repair vs Full Repaint
+- What to Do After a Car Accident in San Diego
+- How Insurance Auto Body Estimates Work
+- Why Body Shop Estimates Are Different
+- How to Know if Collision Damage Is Serious
+
+The site should be built so these city pages and help pages can scale later without redesigning everything.
+
+---
+
+## 16. Primary Customer Path
+
+The best customer path:
+
+1. **Customer lands on homepage.**
+2. **Customer sees:** "What happened to your vehicle?"
+3. **They choose:** Bumper damage · Paint damage · Collision damage · Insurance / accident help · Not sure
+4. **They go to a service-specific page.**
+5. **They see simple explanation and repair options.**
+6. **They upload photos and request direction.**
+7. **You receive** a qualified lead with damage category, city, vehicle info, and photos.
+
+This is stronger than a normal contact form.
+
+---
+
+## 17. Main CTA System
+
+The website should not only say "Contact Us." Use better CTAs.
+
+### Primary CTAs
+
+- **Get a Quote**
+- **Send Photos for Repair Direction**
+- **Choose Your Repair Type**
+- **Start With Your Damage Type**
+- **Get Auto Body Help**
+
+### Secondary CTAs
+
+- **Bumper Damage**
+- **Paint Damage**
+- **Collision Damage**
+- **Insurance Help**
+- **Not Sure? Start Here**
+
+### Best universal CTA
 
 **Send Photos for Repair Direction**
 
-## Form Subheadline
-
-**Upload photos of the damage and tell us what happened. We'll help identify the right repair path for your vehicle.**
-
-## Form Fields
-
-Name
-Phone number
-Email
-Vehicle year/make/model
-City
-Damage type
-What happened?
-Insurance or customer-pay?
-Can the vehicle drive?
-Photo upload
-Preferred contact method
-
-## Damage Type Options
-
-Bumper damage
-Paint damage
-Collision damage
-Insurance claim
-Not sure
-
-## CTA Button
-
-**Send My Repair Request**
-
-or
-
-**Get Repair Direction**
+That CTA is powerful because it tells the customer exactly what to do.
 
 ---
 
-# 16. Homepage Section Blueprint
+## 18. Homepage Section Blueprint
 
 The homepage should be built like this:
 
-## Section 1: Hero
+### Section 1 — Hero
 
-Purpose:
+Purpose: Immediately explain what the site does.
 
-Immediately explain what the site does.
+Headline: **San Diego Auto Body Help, Matched to the Right Repair Solution**
+CTA: **Send Photos for Repair Direction**
 
-Headline:
+### Section 2 — Damage Selector
 
-**San Diego Auto Body Help, Matched to the Right Repair Solution**
+Purpose: Let the customer choose their situation.
 
-CTA:
+Cards: Bumper damage · Paint damage · Collision damage · Insurance help · Not sure
 
-**Send Photos for Repair Direction**
+### Section 3 — Service Gateways
 
-## Section 2: Damage Selector
+Purpose: Push traffic into service pages.
 
-Purpose:
+Cards: Bumper Repair San Diego · Paint Repair San Diego · Collision Repair San Diego · Accident / Insurance Help
 
-Let the customer choose their situation.
+### Section 4 — Why This Exists
 
-Cards:
+Purpose: Explain the guidance model.
 
-Bumper damage
-Paint damage
-Collision damage
-Insurance help
-Not sure
+Copy:
 
-## Section 3: Service Gateways
+> Not every damaged vehicle needs the same kind of repair. AutoBody San Diego helps separate cosmetic bumper repair, paint repair, collision repair, and insurance-related work so you can start in the right place.
 
-Purpose:
+### Section 5 — Local San Diego Coverage
 
-Push traffic into service pages.
+Purpose: Build local SEO.
 
-Cards:
+Mention: San Diego · Lemon Grove · Spring Valley · La Mesa · El Cajon · National City · Chula Vista · Mira Mesa · Kearny Mesa · Santee · Poway
 
-Bumper Repair San Diego
-Paint Repair San Diego
-Collision Repair San Diego
-Accident / Insurance Help
+### Section 6 — Photo Quote CTA
 
-## Section 4: Why This Exists
+Purpose: Convert visitor into lead.
 
-Purpose:
-
-Explain the guidance model.
-
-Copy direction:
-
-**Not every damaged vehicle needs the same kind of repair. AutoBody San Diego helps separate cosmetic bumper repair, paint repair, collision repair, and insurance-related work so you can start in the right place.**
-
-## Section 5: Local San Diego Coverage
-
-Purpose:
-
-Build local SEO.
-
-Mention:
-
-San Diego
-Lemon Grove
-Spring Valley
-La Mesa
-El Cajon
-National City
-Chula Vista
-Mira Mesa
-Kearny Mesa
-Santee
-Poway
-
-## Section 6: Photo Quote CTA
-
-Purpose:
-
-Convert visitor into lead.
-
-Headline:
-
-**Not sure what repair you need? Send photos first.**
-
-CTA:
-
-**Upload Damage Photos**
+Headline: **Not sure what repair you need? Send photos first.**
+CTA: **Upload Damage Photos**
 
 ---
 
-# 17. Brand Trust Strategy
+## 19. Quote Form Strategy
+
+The quote form should not feel like a normal contact form. It should feel like a **repair intake tool**.
+
+### Form Headline
+
+**Send Photos for Repair Direction**
+
+### Form Subheadline
+
+**Upload photos of the damage and tell us what happened. We'll help identify the right repair path for your vehicle.**
+
+### Form Fields
+
+- Name
+- Phone number
+- Email
+- Vehicle year / make / model
+- City
+- Damage type
+- What happened?
+- Insurance or customer-pay?
+- Can the vehicle drive?
+- Photo upload
+- Preferred contact method
+
+### Damage Type Options
+
+Bumper damage · Paint damage · Collision damage · Insurance claim · Not sure
+
+### CTA Button
+
+**Send My Repair Request** or **Get Repair Direction**
+
+---
+
+## 20. Brand Trust Strategy
 
 The site should not just claim trust. It should demonstrate trust through clarity.
 
 Ways to build trust:
 
-Explain repair categories.
-Explain when bumper repair may be enough.
-Explain when paint repair is different from collision repair.
-Explain why photos help.
-Explain when an in-person inspection may be needed.
-Explain insurance basics without making unrealistic claims.
-Use simple local language.
-Avoid overpromising exact prices without seeing the damage.
+- Explain repair categories.
+- Explain when bumper repair may be enough.
+- Explain when paint repair is different from collision repair.
+- Explain why photos help.
+- Explain when an in-person inspection may be needed.
+- Explain insurance basics without making unrealistic claims.
+- Use simple local language.
+- Avoid overpromising exact prices without seeing the damage.
 
-Trust comes from being helpful before asking for the sale.
+Trust comes from being helpful **before** asking for the sale.
+
+### Trust copy example
+
+> A scratched bumper, peeling clear coat, and collision-damaged quarter panel are not the same repair. AutoBody San Diego helps separate cosmetic repair, paint repair, collision repair, and insurance-related work so you can start in the right place.
+
+That is stronger than saying "We offer quality work."
 
 ---
 
-# 18. What Makes This Website Different
+## 21. What Makes This Website Different
 
-Most auto body websites are shop-centered.
+Most auto body websites are shop-centered. They say:
 
-They say:
+> "We do collision repair."
+> "We do paint."
+> "We do insurance."
+> "Call us today."
 
-"We do collision repair."
-"We do paint."
-"We do insurance."
-"Call us today."
+AutoBody San Diego should be customer-centered. It should say:
 
-AutoBody San Diego should be customer-centered.
-
-It should say:
-
-"What happened to your vehicle?"
-"Choose your damage type."
-"Send photos."
-"Get repair direction."
-"Start in the right place."
+> "What happened to your vehicle?"
+> "Choose your damage type."
+> "Send photos."
+> "Get repair direction."
+> "Start in the right place."
 
 That difference matters because confused customers need guidance before they buy.
 
+The customer does not want to decode your services. The customer wants to say:
+
+> "My bumper is cracked."
+> "My paint is peeling."
+> "My car was hit."
+> "I need a quote."
+> "I have insurance."
+> "I do not know what I need."
+
+The website must speak in that language.
+
 ---
 
-# 19. Brand Language Bank
+## 22. Brand Language Bank
 
 These phrases should appear throughout the site:
 
-**Find the right repair path.**
-
-**Start with what happened to your vehicle.**
-
-**Send photos for repair direction.**
-
-**Bumper, paint, collision, and insurance-related auto body help.**
-
-**Not every repair needs the same process.**
-
-**Get clear direction before wasting time or money.**
-
-**Local auto body help for San Diego drivers.**
-
-**Choose the damage type and start there.**
-
-**Photo-based repair guidance.**
-
-**San Diego auto body repair made easier to understand.**
+- **Find the right repair path.**
+- **Start with what happened to your vehicle.**
+- **Send photos for repair direction.**
+- **Bumper, paint, collision, and insurance-related auto body help.**
+- **Not every repair needs the same process.**
+- **Get clear direction before wasting time or money.**
+- **Local auto body help for San Diego drivers.**
+- **Choose the damage type and start there.**
+- **Photo-based repair guidance.**
+- **San Diego auto body repair made easier to understand.**
 
 ---
 
-# 20. Words to Avoid
+## 23. Words to Avoid
 
-Avoid weak or generic phrases like:
+Avoid weak or generic phrases:
 
-Best quality
-Unbeatable prices
-Number one shop
-We care about your car
-Trusted experts
-Satisfaction guaranteed
-Affordable and reliable
-One-stop shop
+- Best quality
+- Unbeatable prices
+- Number one shop
+- We care about your car
+- Trusted experts
+- Satisfaction guaranteed
+- Affordable and reliable
+- One-stop shop
 
-These are overused.
+These are overused. Use instead:
 
-Better phrases:
-
-Clear repair direction
-Damage-based repair path
-Photo-based quote request
-Local San Diego repair guidance
-Bumper, paint, collision, and insurance help
-Start with your damage type
-No confusion, no pressure, no unnecessary work
+- Clear repair direction
+- Damage-based repair path
+- Photo-based quote request
+- Local San Diego repair guidance
+- Bumper, paint, collision, and insurance help
+- Start with your damage type
+- No confusion, no pressure, no unnecessary work
 
 ---
 
-# 21. Final Locked Brand Statement
+## 24. SEO Foundation
 
-Use this as the official foundation:
+The name **AutoBody San Diego** is already an SEO asset. The website should be built around search intent, not just brand ego.
 
-**AutoBody San Diego is a local auto body repair guidance and routing brand built to help San Diego drivers identify the right repair path for bumper damage, paint damage, collision damage, and insurance-related repairs. The website functions as a regional SEO gateway for broad auto body searches while converting visitors through a simple damage-type selector and photo-based quote request. The visual identity is premium, black-and-chrome, accented with electric blue, and designed to feel like a local San Diego auto body command center rather than a generic body shop website.**
+### Broad
 
-That is the foundation for everything.
+auto body San Diego · auto body repair San Diego · auto body shop San Diego · body shop San Diego · San Diego auto body repair
+
+### Service
+
+bumper repair San Diego · paint repair San Diego · collision repair San Diego · car paint job San Diego · auto paint repair San Diego · accident repair San Diego
+
+### Insurance
+
+insurance auto body repair San Diego · body shop insurance claim San Diego · auto body estimate insurance claim · car accident repair estimate · insurance collision repair San Diego
+
+### Photo Quote
+
+auto body photo estimate · send photos for body shop quote · car repair estimate by photos · bumper repair quote by photos · paint repair quote by photos
+
+### City
+
+auto body repair Lemon Grove · auto body repair Spring Valley · auto body repair La Mesa · auto body repair El Cajon · auto body repair Chula Vista · auto body repair National City
+
+The SEO should not feel spammy. It should be clean, natural, and useful.
 
 ---
 
-# 22. Final Claude Prompt for Session 1
+## 25. Brand Relationship Language (staged rollout)
 
-Send this to Claude:
+Do not overcomplicate the customer with every brand at launch. Use AutoBody San Diego as the front-facing guide.
+
+### Early-stage language (v1, now)
+
+> AutoBody San Diego helps local drivers find the right repair direction based on damage type, location, and repair need.
+
+### Later-stage language
+
+> Repair pathways may connect drivers with specialized services for bumper repair, paint repair, collision repair, and insurance-related auto body help.
+
+### Later network language
+
+> AutoBody San Diego connects customers into specialized repair paths including BumperFix USA, PaintFix USA, CollisionFix USA, and CrashFix USA.
+
+The first version should feel simple. Do not overload the customer with the whole empire on day one.
+
+---
+
+## 26. Brand Rules
+
+1. **Stay broad.** AutoBody San Diego must cover the full auto body category. Not only bumper, paint, insurance, or collision.
+2. **Make every page useful.** Every page should help the customer understand something.
+3. **Route traffic intentionally.** Every page should push toward quote, call, text, or service selection.
+4. **Keep the design premium but readable.** Chrome logos are good for identity. Website text must be clean.
+5. **Use San Diego heavily.** The brand has to feel local, not national-generic. Use San Diego drivers, San Diego auto body repair, neighborhood pages, city pages.
+6. **Do not sound like spam SEO.** Use clean language that happens to include keywords — never keyword stuffing.
+
+---
+
+## 27. Final Locked Brand Statement
+
+**AutoBody San Diego is a local auto body repair guidance and routing platform built to help San Diego drivers identify the right repair path for bumper damage, paint damage, collision damage, and insurance-related repairs. The brand functions as the regional SEO gateway for broad auto body searches while directing customers into specialized service paths with clear, simple, photo-based quote options. Its visual identity is premium, automotive, black-and-chrome, accented with electric blue, and designed to feel like a San Diego repair command center rather than a generic body shop website.**
+
+That is the foundation.
+
+---
+
+## 28. Claude / Website Builder Prompt for Session 1
 
 ```text
 We are building the brand foundation for a new website called AutoBody San Diego.
 
-This is not a normal body shop website. It is a San Diego auto body repair guidance and routing platform.
-
-Its purpose is to capture broad organic traffic from people searching for auto body repair, bumper repair, paint repair, collision repair, accident repair help, and insurance auto body repair in San Diego.
+This is not a normal body shop website. It is a San Diego auto body repair guidance and routing platform. Its purpose is to capture broad organic traffic from people searching for auto body repair, bumper repair, paint repair, collision repair, accident repair help, and insurance auto body repair in San Diego.
 
 The website must help customers choose the correct repair path based on what happened to their vehicle.
 
@@ -833,7 +797,7 @@ Visual DNA:
 - Metallic white or chrome-inspired logo treatment
 - Electric blue accent lines
 - Small red accent only when necessary
-- Futuristic automotive typography
+- Futuristic automotive typography (Orbitron display + DM Sans body)
 - Premium local repair authority
 - Clean, sharp, fast, trustworthy
 - Not a cheap directory
@@ -861,19 +825,21 @@ Build everything mobile-first, SEO-ready, fast, and scalable for future city pag
 
 ---
 
-# Session 1 Locked Decision
+## Session 1 Locked Decision
 
 **AutoBody San Diego = the San Diego auto body traffic headquarters.**
 
 Its job is to:
 
-Capture broad search traffic.
-Organize customer repair needs.
-Educate confused drivers.
-Route leads into the correct repair category.
-Support future BumperFix, PaintFix, CollisionFix, and CrashFix traffic.
-Build long-term organic authority across San Diego.
+- Capture broad search traffic.
+- Educate the customer.
+- Sort the repair need.
+- Route the lead.
+- Feed the specialized brands.
+- Build long-term organic authority across San Diego.
 
-The next session should be:
+The next session is:
 
 **Session 2 — Logo System + Visual Direction**
+
+That session will define the exact logo versions, header logo, favicon, icon system, color usage, and what needs to be simplified before the next round of website work.
