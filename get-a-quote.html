@@ -54,10 +54,10 @@
           <p class="lead">We're not a body shop trying to upsell you on extra work. We look at your photos, identify the right repair pathway, and route you to the specialist who handles that exact kind of damage.</p>
           <div class="divider"></div>
           <div style="display:grid;gap:1rem;color:var(--muted);font-size:0.96rem;">
-            <p><strong style="color:var(--concrete);">Bumper damage</strong> &mdash; routed to BumperFix USA for cosmetic and plastic repair.</p>
-            <p><strong style="color:var(--concrete);">Paint damage</strong> &mdash; routed to PaintFix USA for refinish, blending, or full repaint.</p>
-            <p><strong style="color:var(--concrete);">Collision damage</strong> &mdash; routed to CollisionFix USA certified shops.</p>
-            <p><strong style="color:var(--concrete);">Accident or insurance</strong> &mdash; routed to CrashFix USA for claim guidance.</p>
+            <p><strong style="color:var(--concrete);">Bumper damage</strong> &mdash; routed to a bumper specialist for cosmetic and plastic repair.</p>
+            <p><strong style="color:var(--concrete);">Paint damage</strong> &mdash; routed to a paint specialist for refinish, blending, or full repaint.</p>
+            <p><strong style="color:var(--concrete);">Collision damage</strong> &mdash; routed to a certified collision shop.</p>
+            <p><strong style="color:var(--concrete);">Accident or insurance</strong> &mdash; routed to an accident & insurance specialist for claim guidance.</p>
           </div>
           <p class="form-note" style="margin-top:1.5rem;">No phone trees. No pressure. Just a clear next step.</p>
         </div>
@@ -82,15 +82,19 @@
             <input id="qvehicle" name="vehicle" type="text" placeholder="e.g. 2019 Toyota Camry" required>
           </div>
           <div class="field">
-            <label for="qsituation">What happened?</label>
-            <select id="qsituation" name="situation" required>
-              <option value="">Choose a situation&hellip;</option>
-              <option>Bumper scratched, cracked, or dented</option>
-              <option>Paint peeling, faded, or scratched</option>
-              <option>Hit in a collision</option>
-              <option>Need accident / insurance help</option>
-              <option>Not sure &mdash; need guidance</option>
+            <label for="qdamage">Damage type</label>
+            <select id="qdamage" name="damage_type" required>
+              <option value="">Choose a damage type&hellip;</option>
+              <option>Bumper damage</option>
+              <option>Paint damage</option>
+              <option>Collision damage</option>
+              <option>Insurance claim</option>
+              <option>Not sure</option>
             </select>
+          </div>
+          <div class="field">
+            <label for="qsituation">What happened?</label>
+            <textarea id="qsituation" name="situation" rows="2" placeholder="A sentence or two about how the damage happened."></textarea>
           </div>
           <div class="row">
             <div class="field">
@@ -109,6 +113,16 @@
           </div>
           <div class="row">
             <div class="field">
+              <label for="qdrivable">Can the vehicle drive?</label>
+              <select id="qdrivable" name="drivable">
+                <option value="">Choose&hellip;</option>
+                <option>Yes &mdash; drives normally</option>
+                <option>Yes &mdash; drivable but unsafe</option>
+                <option>No &mdash; needs a tow</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+            <div class="field">
               <label for="qcontact">Preferred contact</label>
               <select id="qcontact" name="preferred_contact">
                 <option value="">Choose&hellip;</option>
@@ -117,10 +131,10 @@
                 <option>Email</option>
               </select>
             </div>
-            <div class="field">
-              <label for="qtime">Best time to reach you</label>
-              <input id="qtime" name="best_time" type="text" placeholder="e.g. weekday mornings">
-            </div>
+          </div>
+          <div class="field">
+            <label for="qtime">Best time to reach you</label>
+            <input id="qtime" name="best_time" type="text" placeholder="e.g. weekday mornings">
           </div>
           <div class="field">
             <label for="qnotes">Tell us about the damage</label>
@@ -167,12 +181,11 @@
           </ul>
         </div>
         <div>
-          <h4>Specialist Network</h4>
+          <h4>Quick Links</h4>
           <ul>
-            <li><a href="#" data-route="specialist">BumperFix USA</a></li>
-            <li><a href="#" data-route="specialist">PaintFix USA</a></li>
-            <li><a href="#" data-route="specialist">CollisionFix USA</a></li>
-            <li><a href="#" data-route="specialist">CrashFix USA</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/service-areas">Service Areas</a></li>
             <li><a href="/get-a-quote">Get a Quote</a></li>
           </ul>
         </div>

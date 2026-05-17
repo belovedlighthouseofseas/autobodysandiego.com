@@ -22,6 +22,8 @@ const corePages = [
   { loc: '/insurance-auto-body-repair-san-diego', priority: '0.9', changefreq: 'monthly' },
   { loc: '/get-a-quote', priority: '0.85', changefreq: 'monthly' },
   { loc: '/service-areas', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/about', priority: '0.7', changefreq: 'monthly' },
+  { loc: '/contact', priority: '0.7', changefreq: 'monthly' },
 ];
 
 const cities = JSON.parse(fs.readFileSync(path.join(root, 'data', 'cities.json'), 'utf8'));

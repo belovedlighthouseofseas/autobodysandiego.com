@@ -3,23 +3,25 @@
    Black command-center palette with electric blue + sparing red
    ============================================================ */
 :root {
+  /* Locked to brand-identity.md v1 §10 */
   --ink: #000000;
-  --bg: #0a0a0a;
-  --soft: #111111;
-  --steel: #161616;
-  --panel: #1a1a1a;
-  --line: #262626;
-  --line-bright: #333333;
-  --concrete: #f5f6f7;
-  --concrete-soft: #d6d8db;
-  --muted: #9aa0a6;
-  --muted-soft: #6b7280;
-  --accent: #2d8fff;
-  --accent-bright: #4fa3ff;
-  --accent-dark: #0a66e0;
-  --accent-glow: rgba(45,143,255,0.32);
-  --danger: #ff2d2d;
-  --danger-bright: #ff5252;
+  --bg: #050505;
+  --soft: #080A0D;
+  --steel: #0B0F14;
+  --panel: #11161D;
+  --line: #1B2230;
+  --line-bright: #2A3242;
+  --concrete: #F2F4F7;
+  --concrete-soft: #DDE3EA;
+  --muted: #9AA4B2;
+  --muted-soft: #6B7585;
+  --accent: #009DFF;
+  --accent-bright: #00AEEF;
+  --accent-dark: #007BFF;
+  --accent-deep: #0057D9;
+  --accent-glow: rgba(0,157,255,0.32);
+  --danger: #FF1E1E;
+  --danger-bright: #FF4848;
   --serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --display: 'Chakra Petch', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -105,7 +107,7 @@ section + section { border-top: 1px solid var(--line); }
 .btn-ghost:hover { background: rgba(255,255,255,0.05); border-color: var(--concrete); }
 .btn-danger {
   background: var(--danger); color: #fff;
-  box-shadow: 0 6px 20px rgba(255,45,45,0.28);
+  box-shadow: 0 6px 20px rgba(255,30,30,0.28);
 }
 .btn-danger:hover { background: var(--danger-bright); }
 .btn-sm { padding: 0.55rem 1rem; font-size: 0.85rem; }
@@ -170,8 +172,8 @@ section + section { border-top: 1px solid var(--line); }
 .hero {
   padding: 7rem 0 6rem;
   background:
-    radial-gradient(60% 80% at 80% 0%, rgba(45,143,255,0.16), transparent 70%),
-    radial-gradient(50% 60% at 20% 100%, rgba(255,45,45,0.05), transparent 70%),
+    radial-gradient(60% 80% at 80% 0%, rgba(0,157,255,0.16), transparent 70%),
+    radial-gradient(50% 60% at 20% 100%, rgba(255,30,30,0.05), transparent 70%),
     var(--bg);
   border-bottom: 1px solid var(--line);
   position: relative; overflow: hidden;
@@ -195,7 +197,7 @@ section + section { border-top: 1px solid var(--line); }
 .hero h1 .slash {
   display: inline-block; width: 0.55em; height: 0.07em; background: var(--danger);
   vertical-align: middle; transform: rotate(-25deg); margin: 0 0.2em;
-  box-shadow: 0 0 14px rgba(255,45,45,0.6);
+  box-shadow: 0 0 14px rgba(255,30,30,0.6);
 }
 .hero p.lead { font-size: 1.15rem; max-width: 580px; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2rem; }
@@ -227,7 +229,7 @@ section + section { border-top: 1px solid var(--line); }
   font-weight: 500;
 }
 .hero-card li a:hover {
-  border-color: var(--accent); background: rgba(45,143,255,0.06);
+  border-color: var(--accent); background: rgba(0,157,255,0.06);
   transform: translateX(2px);
 }
 .hero-card li a::after { content: '→'; color: var(--accent-bright); font-family: var(--mono); }
@@ -308,7 +310,7 @@ section + section { border-top: 1px solid var(--line); }
 }
 .coverage-grid a:hover {
   border-color: var(--accent); color: var(--accent-bright);
-  background: rgba(45,143,255,0.05);
+  background: rgba(0,157,255,0.05);
 }
 .coverage-grid a::after { content: '›'; color: var(--muted-soft); }
 .coverage-grid a:hover::after { color: var(--accent-bright); }
@@ -318,7 +320,7 @@ section + section { border-top: 1px solid var(--line); }
    ============================================================ */
 .ecosystem {
   background:
-    radial-gradient(40% 60% at 50% 0%, rgba(45,143,255,0.12), transparent 70%),
+    radial-gradient(40% 60% at 50% 0%, rgba(0,157,255,0.12), transparent 70%),
     var(--soft);
 }
 .ecosystem-grid {
@@ -356,7 +358,7 @@ section + section { border-top: 1px solid var(--line); }
    ============================================================ */
 .quote-section {
   background:
-    radial-gradient(50% 70% at 100% 50%, rgba(45,143,255,0.12), transparent 65%),
+    radial-gradient(50% 70% at 100% 50%, rgba(0,157,255,0.12), transparent 65%),
     var(--soft);
 }
 .quote-grid {
@@ -398,7 +400,7 @@ section + section { border-top: 1px solid var(--line); }
 .page-head {
   padding: 5.5rem 0 4rem;
   background:
-    radial-gradient(50% 80% at 80% 0%, rgba(45,143,255,0.12), transparent 70%),
+    radial-gradient(50% 80% at 80% 0%, rgba(0,157,255,0.12), transparent 70%),
     var(--bg);
   border-bottom: 1px solid var(--line);
 }
@@ -429,7 +431,7 @@ section + section { border-top: 1px solid var(--line); }
 }
 .check .dot {
   flex: 0 0 28px; width: 28px; height: 28px; border-radius: 999px;
-  background: rgba(45,143,255,0.12); color: var(--accent-bright);
+  background: rgba(0,157,255,0.12); color: var(--accent-bright);
   display: inline-flex; align-items: center; justify-content: center;
   font-family: var(--mono); font-size: 0.8rem;
 }
