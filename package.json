@@ -1,0 +1,11 @@
+{
+  "name": "autobodysandiego",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AutoBody San Diego - regional auto body search portal and routing hub.",
+  "scripts": {
+    "build:cities": "node scripts/build-city-pages.mjs",
+    "build:sitemap": "node scripts/build-sitemap.mjs",
+    "build": "npm run build:cities && npm run build:sitemap"
+  }
+}

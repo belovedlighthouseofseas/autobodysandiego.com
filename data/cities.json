@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "chula-vista",
+    "name": "Chula Vista",
+    "region": "South Bay",
+    "blurb": "Chula Vista drivers deal with everything from parking-lot bumper damage near the Otay Ranch Center to highway-speed collisions on the 805 and 5. We route every situation to the right specialist."
+  },
+  {
+    "slug": "national-city",
+    "name": "National City",
+    "region": "South Bay",
+    "blurb": "National City sits at the intersection of the 5, 805, and 54 — high traffic, frequent fender-benders, and a steady stream of cosmetic and collision work."
+  },
+  {
+    "slug": "downtown-san-diego",
+    "name": "Downtown San Diego",
+    "region": "Central",
+    "blurb": "Downtown drivers see tight parking damage, rideshare scrapes, and traffic-light fender impacts. Cosmetic bumper work is the most common pathway here."
+  },
+  {
+    "slug": "el-cajon",
+    "name": "El Cajon",
+    "region": "East County",
+    "blurb": "El Cajon sees a wide mix of work — daily-driver paint repair, collision damage from the 8 and 67, and plenty of bumper scuffs from busy lots around Parkway Plaza."
+  },
+  {
+    "slug": "la-mesa",
+    "name": "La Mesa",
+    "region": "East County",
+    "blurb": "La Mesa drivers along the 8 corridor see a healthy mix of paint and bumper work. Sun-damaged clear coats and parking-lot dents top the list."
+  },
+  {
+    "slug": "santee",
+    "name": "Santee",
+    "region": "East County",
+    "blurb": "Santee combines daily-commute paint damage with occasional collision work from the 52 and 67. Specialists handle both ends."
+  },
+  {
+    "slug": "lemon-grove",
+    "name": "Lemon Grove",
+    "region": "East County",
+    "blurb": "Lemon Grove drivers along the 94 and Broadway often need bumper repair and paint refinishing. We route both pathways to the right specialist."
+  },
+  {
+    "slug": "spring-valley",
+    "name": "Spring Valley",
+    "region": "East County",
+    "blurb": "Spring Valley sees a mix of suburban parking damage and freeway-related collisions on the 94 and 125."
+  },
+  {
+    "slug": "mission-valley",
+    "name": "Mission Valley",
+    "region": "Central",
+    "blurb": "Mission Valley's mall traffic, hotel lots, and the 8 freeway combine to produce a constant flow of cosmetic damage — bumper, paint, and minor collision."
+  },
+  {
+    "slug": "kearny-mesa",
+    "name": "Kearny Mesa",
+    "region": "Central",
+    "blurb": "Kearny Mesa is dense with dealerships and service shops. Drivers here need fast, specialist-grade bumper and paint work without dealership pricing."
+  },
+  {
+    "slug": "clairemont",
+    "name": "Clairemont",
+    "region": "Central",
+    "blurb": "Clairemont's residential streets and 805 access produce a mix of suburban paint and bumper damage with occasional collision work."
+  },
+  {
+    "slug": "north-park",
+    "name": "North Park",
+    "region": "Central",
+    "blurb": "North Park has tight street parking and busy nightlife traffic. Bumper scuffs and door dings dominate, with the occasional rideshare-related collision."
+  },
+  {
+    "slug": "pacific-beach",
+    "name": "Pacific Beach",
+    "region": "Coastal",
+    "blurb": "Pacific Beach drivers fight sun damage and salt air — plus the parking damage that comes with crowded streets. Paint refinish and bumper work lead the list."
+  },
+  {
+    "slug": "mira-mesa",
+    "name": "Mira Mesa",
+    "region": "Central",
+    "blurb": "Mira Mesa's commuter traffic on the 805 and 15 means a steady mix of bumper damage and collision work. We route by damage type, not by shop convenience."
+  },
+  {
+    "slug": "poway",
+    "name": "Poway",
+    "region": "North County",
+    "blurb": "Poway drivers see suburban paint and bumper damage plus the occasional more serious collision on the 67. Specialist routing keeps repairs honest."
+  },
+  {
+    "slug": "escondido",
+    "name": "Escondido",
+    "region": "North County",
+    "blurb": "Escondido's freeway access on the 15 and 78 means a mix of high-speed collision work and the usual suburban paint and bumper jobs."
+  },
+  {
+    "slug": "carlsbad",
+    "name": "Carlsbad",
+    "region": "North County",
+    "blurb": "Carlsbad drivers see coastal sun-damaged paint plus a steady volume of cosmetic bumper work. Specialist refinishing and bumper repair lead here."
+  },
+  {
+    "slug": "oceanside",
+    "name": "Oceanside",
+    "region": "North County",
+    "blurb": "Oceanside combines 5 and 78 freeway access with coastal weather and base-related traffic. Every repair pathway shows up here regularly."
+  }
+]
