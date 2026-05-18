@@ -534,6 +534,48 @@ section + section { border-top: 1px solid var(--line); }
 }
 
 /* ============================================================
+   HERO SUPPORT POINTS (below the CTAs in the hero)
+   ============================================================ */
+.hero-points {
+  list-style: none; display: flex; flex-wrap: wrap;
+  gap: 1.5rem; margin-top: 1.8rem;
+  font-family: var(--mono); font-size: 0.74rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted-soft);
+}
+.hero-points li { display: inline-flex; align-items: center; gap: 0.5rem; }
+.hero-points li::before {
+  content: ''; width: 6px; height: 6px;
+  background: var(--accent); border-radius: 999px;
+  display: inline-block;
+  box-shadow: 0 0 6px var(--accent-glow);
+}
+
+/* ============================================================
+   DUAL-ROUTE STRIP (Insurance / Accident — two CTAs on one band)
+   ============================================================ */
+.dual-route {
+  background: linear-gradient(135deg, var(--steel) 0%, var(--soft) 100%);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem;
+  align-items: center;
+  position: relative; overflow: hidden;
+}
+.dual-route::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: linear-gradient(180deg, var(--accent), var(--danger));
+}
+@media (max-width: 720px) {
+  .dual-route { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+}
+.dual-route h2 { font-size: clamp(1.5rem, 2.8vw, 2.1rem); margin-bottom: 0.65rem; }
+.dual-route p { color: var(--muted); max-width: 620px; font-size: 1rem; }
+.dual-route-ctas { display: flex; flex-direction: column; gap: 0.6rem; }
+@media (max-width: 720px) { .dual-route-ctas { flex-direction: row; flex-wrap: wrap; } }
+
+/* ============================================================
    HOW IT WORKS (numbered process steps)
    ============================================================ */
 .howit-grid {

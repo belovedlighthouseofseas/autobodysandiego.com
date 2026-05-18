@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":["AutoRepair","LocalBusiness"],"name":"AutoBody San Diego","url":"https://autobodysandiego.com/","image":"https://autobodysandiego.com/assets/logo.png","description":"Regional auto body repair guidance and routing for San Diego drivers — bumper, paint, collision, and insurance-related damage.","areaServed":{"@type":"AdministrativeArea","name":"San Diego County, California"},"serviceArea":{"@type":"GeoCircle","geoMidpoint":{"@type":"GeoCoordinates","latitude":32.7157,"longitude":-117.1611},"geoRadius":50000}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I get an auto body quote from photos?","acceptedAnswer":{"@type":"Answer","text":"Photos can help start the repair direction, especially for bumper, paint, and visible exterior damage. Some collision or insurance-related damage may still need an in-person inspection before a final repair plan can be made."}},{"@type":"Question","name":"What if I do not know whether I need bumper repair, paint repair, or collision repair?","acceptedAnswer":{"@type":"Answer","text":"That is exactly why AutoBody San Diego is built around damage type. Start with \"not sure\" and send photos so the request can be reviewed from the right direction."}},{"@type":"Question","name":"Do I need insurance to request help?","acceptedAnswer":{"@type":"Answer","text":"No. AutoBody San Diego can help organize both customer-pay and insurance-related repair requests."}},{"@type":"Question","name":"What photos should I send?","acceptedAnswer":{"@type":"Answer","text":"Send a close-up of the damage, a wider photo showing the damaged area on the vehicle, and any additional angles that show cracks, dents, scratches, paint damage, or panel alignment issues."}},{"@type":"Question","name":"What areas do you serve?","acceptedAnswer":{"@type":"Answer","text":"AutoBody San Diego focuses on San Diego and surrounding areas including Lemon Grove, Spring Valley, La Mesa, El Cajon, National City, Chula Vista, Mira Mesa, Kearny Mesa, Santee, Poway, and nearby areas."}}]}</script>
 </head>
 <body>
   <header class="cmd-bar">
@@ -46,7 +47,7 @@
   </header>
 
   <main>
-    <!-- SECTION 1 — HERO -->
+    <!-- SECTION 2 — HERO -->
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
@@ -57,6 +58,11 @@
             <a class="btn btn-primary btn-lg" href="/get-a-quote">Send Photos for Repair Direction</a>
             <a class="btn btn-ghost btn-lg" href="#damage-selector">Choose Your Repair Type</a>
           </div>
+          <ul class="hero-points">
+            <li>Bumper &middot; Paint &middot; Collision &middot; Insurance</li>
+            <li>Photo-based quote requests</li>
+            <li>Built for San Diego drivers</li>
+          </ul>
         </div>
         <aside class="hero-card" aria-label="Quick repair routing">
           <h3>Jump to the Right Repair</h3>
@@ -70,121 +76,165 @@
       </div>
     </section>
 
-    <!-- SECTION 2 — DAMAGE SELECTOR -->
+    <!-- SECTION 3 — DAMAGE SELECTOR -->
     <section id="damage-selector">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Start with what happened</span>
           <h2 class="h2">What happened to your vehicle?</h2>
-          <p class="lead">Most San Diego drivers waste time at the wrong kind of shop. Pick the situation that matches your vehicle and we'll route you to the right repair path.</p>
+          <p class="lead">Start with the damage type. You do not need to know the technical repair category before asking for help.</p>
         </div>
         <div class="selector-grid">
           <a class="repair-card" href="/bumper-repair-san-diego">
             <span class="tag">Bumper Damage</span>
             <h3>My bumper is scratched, cracked, or dented</h3>
-            <p>Curb scuffs, parking-lot dings, hairline cracks, paint transfer, or a cracked tab on the bumper cover.</p>
-            <span class="cta">View Bumper Repair</span>
+            <p>For bumper scuffs, cracks, dents, corner damage, parking lot damage, and bumper paint issues.</p>
+            <span class="cta">Start Bumper Repair</span>
           </a>
           <a class="repair-card" href="/paint-repair-san-diego">
             <span class="tag">Paint Damage</span>
             <h3>My paint is faded, peeling, scratched, or damaged</h3>
-            <p>Clear coat peeling, oxidation, deep scratches, panel refinishing, or a full vehicle repaint.</p>
-            <span class="cta">View Paint Repair</span>
+            <p>For scratches, peeling clear coat, paint chips, faded paint, oxidation, panel repainting, and full repaint questions.</p>
+            <span class="cta">Start Paint Repair</span>
           </a>
           <a class="repair-card" href="/collision-repair-san-diego">
             <span class="tag">Collision Damage</span>
             <h3>My vehicle was hit in a collision</h3>
-            <p>Crushed panels, fender damage, structural concerns, frame work, or major body repair after impact.</p>
-            <span class="cta">View Collision Repair</span>
+            <p>For accident damage, dents, damaged panels, side swipes, rear-end impacts, and possible hidden damage.</p>
+            <span class="cta">Start Collision Repair</span>
           </a>
           <a class="repair-card" href="/accident-repair-help-san-diego">
             <span class="tag">Accident / Insurance</span>
             <h3>I need help with an accident or insurance claim</h3>
-            <p>Estimates, supplements, documentation, claim confusion, or you just don't know what to do next.</p>
-            <span class="cta">View Accident Help</span>
+            <p>For claim-related repairs, estimates, supplements, accident questions, and repair direction after a crash.</p>
+            <span class="cta">Start Accident Help</span>
           </a>
           <a class="repair-card" href="/get-a-quote">
             <span class="tag">Not Sure</span>
             <h3>I'm not sure what repair I need</h3>
-            <p>Send a couple of photos and we'll tell you which repair path fits &mdash; with a realistic range and no pressure.</p>
-            <span class="cta">Send Photos for Repair Direction</span>
+            <p>Upload photos and describe what happened. We'll help point your request toward the right repair path.</p>
+            <span class="cta">Send Photos First</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3 — SERVICE GATEWAYS -->
+    <!-- SECTION 4 — PHOTO QUOTE CTA -->
+    <section class="quote-section">
+      <div class="wrap quote-grid">
+        <div>
+          <span class="eyebrow">Photo-Based Repair Direction</span>
+          <h2 class="h2">Not sure what repair path fits your vehicle? <span class="accent">Send photos first.</span></h2>
+          <p class="lead">Clear photos help organize the request before wasting time in the wrong repair category. Send the damage, vehicle info, and what happened so your repair request can start in the right direction.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-lg" href="/get-a-quote">Upload Damage Photos</a>
+            <a class="btn btn-ghost btn-lg" href="/contact">Call or Text Instead</a>
+          </div>
+        </div>
+        <div class="check-grid" style="grid-template-columns: 1fr; gap: 0.75rem;">
+          <div class="check"><span class="dot">A</span><div><h4>Close-up of the damage</h4><p>One clear shot showing the scratch, crack, dent, or paint issue itself.</p></div></div>
+          <div class="check"><span class="dot">B</span><div><h4>Wider photo showing where the damage is</h4><p>So we can see which panel and how the damage relates to the rest of the vehicle.</p></div></div>
+          <div class="check"><span class="dot">C</span><div><h4>Vehicle year, make, and model</h4><p>So we can match paint codes and confirm parts availability.</p></div></div>
+          <div class="check"><span class="dot">D</span><div><h4>Insurance or customer-pay?</h4><p>So we can route the request to the right repair path.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — SERVICE GATEWAY CARDS -->
     <section>
       <div class="wrap">
         <div class="section-head center">
           <span class="eyebrow">Repair Pathways</span>
-          <h2 class="h2">Four pathways. One place to start.</h2>
-          <p class="lead">Each path is built around the kind of damage you're actually dealing with &mdash; not generic "body shop" services.</p>
+          <h2 class="h2">Auto Body Repair Paths in San Diego</h2>
+          <p class="lead">Different damage needs different repair direction. Choose the path that best matches your vehicle.</p>
         </div>
         <div class="gateway-grid">
           <article class="gateway">
             <span class="gateway-num">01 &mdash; Bumper</span>
             <h3>Bumper Repair <span class="accent">San Diego</span></h3>
-            <p>For scratches, cracks, dents, scuffs, plastic damage, and cosmetic bumper work. Faster and cheaper than a full body shop when the rest of the car is fine.</p>
+            <p>For bumper scratches, cracks, scuffs, dents, corner damage, and bumper paint repair.</p>
             <a class="btn btn-ghost" href="/bumper-repair-san-diego">View Bumper Repair</a>
           </article>
           <article class="gateway">
             <span class="gateway-num">02 &mdash; Paint</span>
             <h3>Paint Repair <span class="accent">San Diego</span></h3>
-            <p>Peeling clear coat, oxidation, deep scratches, panel refinishing, color matching, and full vehicle repaints handled by specialists.</p>
+            <p>For scratches, peeling clear coat, faded paint, paint chips, panel repainting, and full paint job questions.</p>
             <a class="btn btn-ghost" href="/paint-repair-san-diego">View Paint Repair</a>
           </article>
           <article class="gateway">
             <span class="gateway-num">03 &mdash; Collision</span>
             <h3>Collision Repair <span class="accent">San Diego</span></h3>
-            <p>Accident damage, panel replacement, frame and structural work, and larger body repairs routed to the right collision specialist.</p>
+            <p>For accident damage, panel damage, body repair, impact damage, and repair planning after a vehicle hit.</p>
             <a class="btn btn-ghost" href="/collision-repair-san-diego">View Collision Repair</a>
           </article>
           <article class="gateway">
-            <span class="gateway-num">04 &mdash; Accident / Insurance</span>
-            <h3>Accident &amp; Insurance <span class="accent">Help</span></h3>
-            <p>Help with claims, estimates, supplements, and accident confusion. Built for drivers who feel stuck between the adjuster and the shop.</p>
-            <a class="btn btn-ghost" href="/accident-repair-help-san-diego">Get Accident Help</a>
+            <span class="gateway-num">04 &mdash; Insurance</span>
+            <h3>Insurance Auto Body <span class="accent">Help</span></h3>
+            <p>For claim-related repairs, estimates, supplements, documentation questions, and accident repair direction.</p>
+            <a class="btn btn-ghost" href="/insurance-auto-body-repair-san-diego">View Insurance Help</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4 — PHOTO QUOTE CTA (mid-funnel reinforcement) -->
-    <section class="quote-section">
-      <div class="wrap text-center">
-        <span class="eyebrow">Photo-Based Repair Direction</span>
-        <h2 class="h2">Not sure what repair path fits your vehicle? <span class="accent">Send photos first.</span></h2>
-        <p class="lead" style="margin-left:auto;margin-right:auto;">Upload clear photos of the damage and share what happened. AutoBody San Diego helps organize the repair request so you can start with the right direction.</p>
-        <div class="cta-row" style="justify-content:center;">
-          <a class="btn btn-primary btn-lg" href="/get-a-quote">Send Damage Photos</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 5 — WHY REPAIR TYPE MATTERS -->
+    <!-- SECTION 6 — WHY REPAIR TYPE MATTERS -->
     <section>
       <div class="wrap">
         <div class="edu-grid">
           <div>
             <span class="eyebrow">Why Repair Type Matters</span>
-            <h2 class="h2">A scratched bumper and a collision-damaged panel are not the same repair.</h2>
+            <h2 class="h2">A scratched bumper, peeling clear coat, and collision-damaged panel are not the same repair.</h2>
           </div>
           <div>
-            <p>Some damage can be repaired cosmetically. Some damage needs paint refinishing. Some collision damage needs a deeper inspection. AutoBody San Diego helps separate the repair paths before you waste time guessing.</p>
-            <p>Most San Diego drivers default to "body shop" the second something happens. But if the only damage is on the bumper, that's a different kind of work &mdash; and a different price. Start with what actually happened to the vehicle, and the right shop becomes obvious.</p>
+            <p>Some damage may be cosmetic. Some damage may require paint refinishing. Some collision damage may need deeper inspection before a proper repair direction can be given.</p>
+            <p>AutoBody San Diego helps separate bumper repair, paint repair, collision repair, and insurance-related repair requests so drivers can start in the right place.</p>
+            <ul class="hero-points" style="margin-top: 1.5rem; flex-direction: column; gap: 0.75rem; letter-spacing: 0.06em; text-transform: none; font-size: 0.92rem; font-family: var(--serif);">
+              <li>Cosmetic bumper damage may not require full replacement.</li>
+              <li>Paint damage may need localized refinishing or a larger repaint plan.</li>
+              <li>Collision damage may involve hidden damage or panel alignment issues.</li>
+              <li>Insurance-related repairs may require documentation, estimates, or additional review.</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6 — SAN DIEGO SERVICE COVERAGE -->
+    <!-- SECTION 7 — HOW IT WORKS -->
+    <section>
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="eyebrow">How It Works</span>
+          <h2 class="h2">How AutoBody San Diego Works</h2>
+          <p class="lead">Four steps. No phone trees.</p>
+        </div>
+        <div class="howit-grid">
+          <div class="howit-step">
+            <h3>Choose the damage type</h3>
+            <p>Start with bumper, paint, collision, insurance, or "not sure."</p>
+          </div>
+          <div class="howit-step">
+            <h3>Send photos and vehicle info</h3>
+            <p>Upload clear photos and basic details about the vehicle and what happened.</p>
+          </div>
+          <div class="howit-step">
+            <h3>Get repair direction</h3>
+            <p>Your request gets organized toward the right repair category &mdash; with a realistic range.</p>
+          </div>
+          <div class="howit-step">
+            <h3>Move toward the next step</h3>
+            <p>Depending on the damage, the next step may be a photo quote, in-person review, inspection, or repair scheduling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8 — SAN DIEGO SERVICE COVERAGE -->
     <section>
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">San Diego Coverage</span>
-          <h2 class="h2">Local pages for every San Diego neighborhood we cover.</h2>
-          <p class="lead">Auto body, bumper, paint, and collision routing for drivers across San Diego County.</p>
+          <h2 class="h2">Auto Body Repair Help Across San Diego County</h2>
+          <p class="lead">AutoBody San Diego helps drivers across San Diego and surrounding areas start the right repair request for bumper damage, paint damage, collision damage, and insurance-related auto body repairs.</p>
         </div>
         <div class="coverage-grid">
           <a href="/auto-body-repair-chula-vista">Chula Vista</a>
@@ -207,49 +257,70 @@
           <a href="/auto-body-repair-downtown-san-diego">Downtown San Diego</a>
         </div>
         <div class="cta-row">
-          <a class="btn btn-ghost" href="/service-areas">See full San Diego coverage &rarr;</a>
+          <a class="btn btn-ghost" href="/service-areas">View Service Areas &rarr;</a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 7 — HOW IT WORKS -->
-    <section>
+    <!-- SECTION 9 — INSURANCE / ACCIDENT GUIDANCE STRIP -->
+    <section class="ecosystem">
       <div class="wrap">
-        <div class="section-head center">
-          <span class="eyebrow">How It Works</span>
-          <h2 class="h2">Four steps. No phone trees.</h2>
-          <p class="lead">From confused damage to a clear repair direction in 24 hours.</p>
-        </div>
-        <div class="howit-grid">
-          <div class="howit-step">
-            <h3>Choose your damage type</h3>
-            <p>Pick the situation that matches your vehicle &mdash; bumper, paint, collision, accident, or "not sure."</p>
+        <div class="dual-route">
+          <div>
+            <span class="eyebrow">After an Accident</span>
+            <h2 class="h2">Dealing With an Accident or Insurance Claim?</h2>
+            <p>If your vehicle was hit or the repair may involve insurance, start by organizing the damage information. Photos, vehicle details, claim status, and a short explanation of what happened can help point the repair request in the right direction.</p>
           </div>
-          <div class="howit-step">
-            <h3>Send photos of the vehicle</h3>
-            <p>A few clear photos from multiple angles. That's enough to tell us what kind of repair this actually is.</p>
-          </div>
-          <div class="howit-step">
-            <h3>Get repair direction</h3>
-            <p>Same-day response with a realistic range and the specific specialist your damage needs.</p>
-          </div>
-          <div class="howit-step">
-            <h3>Move to the right repair</h3>
-            <p>You're routed to a shop built for that exact kind of work &mdash; no upsell, no chasing estimates.</p>
+          <div class="dual-route-ctas">
+            <a class="btn btn-primary btn-lg" href="/accident-repair-help-san-diego">Start Accident Repair Help</a>
+            <a class="btn btn-ghost btn-lg" href="/insurance-auto-body-repair-san-diego">Insurance Repair Help</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 8 — FINAL CTA -->
+    <!-- SECTION 10 — FAQ PREVIEW -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Common Questions</span>
+          <h2 class="h2">Auto Body Repair Questions</h2>
+          <p class="lead">A few of the questions San Diego drivers ask before sending photos.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Can I get an auto body quote from photos?</summary>
+            <div class="faq-body">Photos can help start the repair direction, especially for bumper, paint, and visible exterior damage. Some collision or insurance-related damage may still need an in-person inspection before a final repair plan can be made.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What if I do not know whether I need bumper repair, paint repair, or collision repair?</summary>
+            <div class="faq-body">That is exactly why AutoBody San Diego is built around damage type. Start with "not sure" and send photos so the request can be reviewed from the right direction.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need insurance to request help?</summary>
+            <div class="faq-body">No. AutoBody San Diego can help organize both customer-pay and insurance-related repair requests.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What photos should I send?</summary>
+            <div class="faq-body">Send a close-up of the damage, a wider photo showing the damaged area on the vehicle, and any additional angles that show cracks, dents, scratches, paint damage, or panel alignment issues.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What areas do you serve?</summary>
+            <div class="faq-body">AutoBody San Diego focuses on San Diego and surrounding areas including Lemon Grove, Spring Valley, La Mesa, El Cajon, National City, Chula Vista, Mira Mesa, Kearny Mesa, Santee, Poway, and nearby areas.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11 — FINAL CTA -->
     <section class="quote-section">
       <div class="wrap text-center">
         <span class="eyebrow">Start Here</span>
-        <h2 class="h2">Start with photos. <span class="accent">Get pointed in the right direction.</span></h2>
-        <p class="lead" style="margin-left:auto;margin-right:auto;">No phone trees. No pressure. Just clear repair direction for San Diego drivers.</p>
+        <h2 class="h2">Start With Photos. <span class="accent">Get Pointed in the Right Direction.</span></h2>
+        <p class="lead" style="margin-left:auto;margin-right:auto;">Whether the damage is bumper, paint, collision, or insurance-related, the easiest first step is to send photos and explain what happened.</p>
         <div class="cta-row" style="justify-content:center;">
-          <a class="btn btn-primary btn-lg" href="/get-a-quote">Get a Quote</a>
-          <a class="btn btn-ghost btn-lg" href="/contact">Call or Text</a>
+          <a class="btn btn-primary btn-lg" href="/get-a-quote">Send Photos for Repair Direction</a>
+          <a class="btn btn-ghost btn-lg" href="#damage-selector">Choose Repair Type</a>
         </div>
       </div>
     </section>
@@ -262,7 +333,7 @@
           <a class="cmd-brand" href="/">
             <img src="/assets/logo.png" alt="AutoBody San Diego — Collision, Paint, Bumper, Insurance Help" class="cmd-logo" width="180" height="101">
           </a>
-          <p>Local auto body repair guidance and routing for San Diego drivers. Bumper, paint, collision, and insurance-related repair direction &mdash; matched to your damage type.</p>
+          <p>Local auto body repair guidance for bumper, paint, collision, and insurance-related vehicle damage in San Diego.</p>
         </div>
         <div>
           <h4>Repair Pathways</h4>
