@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AutoBody San Diego &mdash; San Diego Auto Body Help, Matched to the Right Repair Solution</title>
-  <meta name="description" content="Tell us what happened to your vehicle. AutoBody San Diego helps San Diego drivers find the right repair path for bumper, paint, collision, and insurance-related damage.">
+  <title>AutoBody San Diego | Bumper, Paint &amp; Collision Repair Help</title>
+  <meta name="description" content="Find the right auto body repair path in San Diego. Get help with bumper damage, paint repair, collision damage, insurance-related repairs, and photo-based quote requests.">
   <link rel="canonical" href="https://autobodysandiego.com/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AutoBody San Diego &mdash; Auto Body Help, Matched to the Right Repair Solution">
@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":["AutoRepair","LocalBusiness"],"name":"AutoBody San Diego","url":"https://autobodysandiego.com/","image":"https://autobodysandiego.com/assets/logo.png","description":"Regional auto body repair guidance and routing for San Diego drivers — bumper, paint, collision, and insurance-related damage.","areaServed":{"@type":"AdministrativeArea","name":"San Diego County, California"},"serviceArea":{"@type":"GeoCircle","geoMidpoint":{"@type":"GeoCoordinates","latitude":32.7157,"longitude":-117.1611},"geoRadius":50000}}</script>
 </head>
 <body>
   <header class="cmd-bar">
@@ -26,11 +27,19 @@
       </a>
       <button class="cmd-toggle" aria-label="Toggle menu" aria-controls="primaryNav" aria-expanded="false"><span></span></button>
       <nav class="cmd-nav" id="primaryNav">
-        <a href="/bumper-repair-san-diego">Bumper</a>
-        <a href="/paint-repair-san-diego">Paint</a>
-        <a href="/collision-repair-san-diego">Collision</a>
-        <a href="/accident-repair-help-san-diego">Accident Help</a>
+        <div class="cmd-nav-dropdown">
+          <button class="cmd-nav-toggle" aria-haspopup="true" aria-expanded="false">Repair Types <span class="caret">&#9662;</span></button>
+          <div class="cmd-nav-menu">
+            <a href="/bumper-repair-san-diego">Bumper Repair</a>
+            <a href="/paint-repair-san-diego">Paint Repair</a>
+            <a href="/collision-repair-san-diego">Collision Repair</a>
+            <a href="/accident-repair-help-san-diego">Accident Repair Help</a>
+            <a href="/get-a-quote">Not Sure? Start Here</a>
+          </div>
+        </div>
+        <a href="/insurance-auto-body-repair-san-diego">Insurance Help</a>
         <a href="/service-areas">Service Areas</a>
+        <a href="/about">About</a>
         <a class="btn btn-primary btn-sm" href="/get-a-quote">Get a Quote</a>
       </nav>
     </div>
@@ -141,23 +150,35 @@
       </div>
     </section>
 
-    <!-- SECTION 4 — WHY THIS EXISTS -->
+    <!-- SECTION 4 — PHOTO QUOTE CTA (mid-funnel reinforcement) -->
+    <section class="quote-section">
+      <div class="wrap text-center">
+        <span class="eyebrow">Photo-Based Repair Direction</span>
+        <h2 class="h2">Not sure what repair path fits your vehicle? <span class="accent">Send photos first.</span></h2>
+        <p class="lead" style="margin-left:auto;margin-right:auto;">Upload clear photos of the damage and share what happened. AutoBody San Diego helps organize the repair request so you can start with the right direction.</p>
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn btn-primary btn-lg" href="/get-a-quote">Send Damage Photos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — WHY REPAIR TYPE MATTERS -->
     <section>
       <div class="wrap">
         <div class="edu-grid">
           <div>
-            <span class="eyebrow">Why This Exists</span>
-            <h2 class="h2">Not every damaged vehicle needs the same kind of repair.</h2>
+            <span class="eyebrow">Why Repair Type Matters</span>
+            <h2 class="h2">A scratched bumper and a collision-damaged panel are not the same repair.</h2>
           </div>
           <div>
-            <p>AutoBody San Diego helps separate cosmetic bumper repair, paint repair, collision repair, and insurance-related work so you can start in the right place.</p>
-            <p>Some cars only need cosmetic bumper work. Others need paint correction or panel refinishing. Some need full collision repair, structural evaluation, or careful insurance documentation. AutoBody San Diego organizes the repair process so San Diego drivers can move in the right direction from the beginning &mdash; instead of chasing estimates at the wrong kind of shop and losing two weeks of time.</p>
+            <p>Some damage can be repaired cosmetically. Some damage needs paint refinishing. Some collision damage needs a deeper inspection. AutoBody San Diego helps separate the repair paths before you waste time guessing.</p>
+            <p>Most San Diego drivers default to "body shop" the second something happens. But if the only damage is on the bumper, that's a different kind of work &mdash; and a different price. Start with what actually happened to the vehicle, and the right shop becomes obvious.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 5 — LOCAL SAN DIEGO COVERAGE -->
+    <!-- SECTION 6 — SAN DIEGO SERVICE COVERAGE -->
     <section>
       <div class="wrap">
         <div class="section-head">
@@ -191,15 +212,44 @@
       </div>
     </section>
 
-    <!-- SECTION 6 — PHOTO QUOTE CTA -->
+    <!-- SECTION 7 — HOW IT WORKS -->
+    <section>
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="eyebrow">How It Works</span>
+          <h2 class="h2">Four steps. No phone trees.</h2>
+          <p class="lead">From confused damage to a clear repair direction in 24 hours.</p>
+        </div>
+        <div class="howit-grid">
+          <div class="howit-step">
+            <h3>Choose your damage type</h3>
+            <p>Pick the situation that matches your vehicle &mdash; bumper, paint, collision, accident, or "not sure."</p>
+          </div>
+          <div class="howit-step">
+            <h3>Send photos of the vehicle</h3>
+            <p>A few clear photos from multiple angles. That's enough to tell us what kind of repair this actually is.</p>
+          </div>
+          <div class="howit-step">
+            <h3>Get repair direction</h3>
+            <p>Same-day response with a realistic range and the specific specialist your damage needs.</p>
+          </div>
+          <div class="howit-step">
+            <h3>Move to the right repair</h3>
+            <p>You're routed to a shop built for that exact kind of work &mdash; no upsell, no chasing estimates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8 — FINAL CTA -->
     <section class="quote-section">
       <div class="wrap text-center">
-        <span class="eyebrow">Get Started</span>
-        <h2 class="h2">Not sure what repair you need? <span class="accent">Send photos first.</span></h2>
-        <p class="lead" style="margin-left:auto;margin-right:auto;">Upload a couple of photos and tell us what happened. We'll match your damage to the right repair path &mdash; with a realistic range and no pressure. Same-day response, every day.</p>
+        <span class="eyebrow">Start Here</span>
+        <h2 class="h2">Start with photos. <span class="accent">Get pointed in the right direction.</span></h2>
+        <p class="lead" style="margin-left:auto;margin-right:auto;">No phone trees. No pressure. Just clear repair direction for San Diego drivers.</p>
         <div class="cta-row" style="justify-content:center;">
-          <a class="btn btn-primary btn-lg" href="/get-a-quote">Upload Damage Photos</a>
-          <a class="btn btn-ghost btn-lg" href="/service-areas">Browse Service Areas</a>
+          <a class="btn btn-primary btn-lg" href="/get-a-quote">Get a Quote</a>
+          <a class="btn btn-ghost btn-lg" href="/contact">Call or Text</a>
         </div>
       </div>
     </section>
@@ -235,12 +285,12 @@
           </ul>
         </div>
         <div>
-          <h4>Quick Links</h4>
+          <h4>Start Here</h4>
           <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/service-areas">Service Areas</a></li>
             <li><a href="/get-a-quote">Get a Quote</a></li>
+            <li><a href="/get-a-quote">Send Photos</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
           </ul>
         </div>
       </div>
