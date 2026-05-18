@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="assets/styles.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://autobodysandiego.com/"},{"@type":"ListItem","position":2,"name":"Get a Quote","item":"https://autobodysandiego.com/get-a-quote"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I get a quote from photos?","acceptedAnswer":{"@type":"Answer","text":"Photos can help start the repair direction for visible bumper, paint, and exterior damage. Some collision or insurance-related damage may still need in-person inspection before a final repair plan can be confirmed."}},{"@type":"Question","name":"What if I am not sure what damage type to choose?","acceptedAnswer":{"@type":"Answer","text":"Choose \"not sure\" and upload photos. The request can still be reviewed and organized toward the correct repair path."}},{"@type":"Question","name":"Should I send insurance information?","acceptedAnswer":{"@type":"Answer","text":"If the repair may involve insurance and you already have claim information or an estimate, you can mention that in the form. You do not need to have everything ready before starting."}},{"@type":"Question","name":"How many photos should I upload?","acceptedAnswer":{"@type":"Answer","text":"Three to five photos is usually a good start: one close-up, one wider view, one side angle, and any additional photos showing cracks, dents, paint damage, or panel gaps."}},{"@type":"Question","name":"Can I text photos instead?","acceptedAnswer":{"@type":"Answer","text":"Yes, if texting is available, you can text photos directly. The form is helpful because it also organizes vehicle info, city, damage type, and contact preference."}}]}</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/assets/analytics.js"></script>
 </head>
 <body>
   <header class="cmd-bar">
@@ -84,8 +86,8 @@
           <h2 class="h2">Tell us about the damage.</h2>
           <p class="lead">Name, phone, and damage type are required. Everything else helps us route faster &mdash; but you don't need it all up front.</p>
         </div>
-        <!-- TODO: Replace YOUR_FORMSPREE_ID_HERE with your real Formspree form ID. Sign up at https://formspree.io -->
-        <form class="quote-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST" enctype="multipart/form-data" data-track="quote_form_started">
+        <!-- Form posts to FormSubmit. First submission triggers a one-click confirmation email to the recipient address; after that, submissions deliver normally. To hide the email from page source, swap to FormSubmit's hashed endpoint after the first confirmation. -->
+        <form class="quote-form" action="https://formsubmit.co/davidraymurillo@gmail.com" method="POST" enctype="multipart/form-data" data-track="quote_form_started">
           <input type="hidden" name="_next" value="https://autobodysandiego.com/thank-you">
           <input type="hidden" name="_subject" value="New AutoBody SD Lead">
 

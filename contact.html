@@ -17,6 +17,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/assets/analytics.js"></script>
 </head>
 <body>
   <header class="cmd-bar">
@@ -69,8 +71,8 @@
           </div>
           <p class="form-note" style="margin-top:1.5rem;">Same-day response. No phone trees. No pressure.</p>
         </div>
-        <!-- TODO: Replace YOUR_FORMSPREE_ID_HERE with your real Formspree form ID. Sign up at https://formspree.io -->
-        <form class="quote-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+        <!-- Form posts to FormSubmit. First submission triggers a one-click confirmation email to the recipient address; after that, submissions deliver normally. To hide the email from page source, swap to FormSubmit's hashed endpoint after the first confirmation. -->
+        <form class="quote-form" action="https://formsubmit.co/davidraymurillo@gmail.com" method="POST">
           <div class="row">
             <div class="field">
               <label for="cname">Name</label>

@@ -42,11 +42,40 @@ regenerated.
 node scripts/build-sitemap.mjs
 ```
 
-## Configuration TODOs
+## Form backend (FormSubmit)
 
-- **Quote form endpoint** — `get-a-quote.html` and home quote form post to
-  `https://formspree.io/f/YOUR_FORMSPREE_ID_HERE`. Sign up at
-  https://formspree.io, paste your real form ID in those two files.
-- **Specialist brand URLs** — service-page CTAs that route to BumperFix USA,
-  PaintFix USA, CollisionFix USA, CrashFix USA currently use `#` placeholders.
-  Search the repo for `data-route="specialist"` to swap in real URLs.
+Forms on `/get-a-quote` and `/contact` post to
+`https://formsubmit.co/davidraymurillo@gmail.com`.
+
+**One-time activation:** The first time someone submits any form, FormSubmit
+will email davidraymurillo@gmail.com asking to confirm the address. Click
+the confirmation link in that email — once. After that, every future
+submission delivers directly to your inbox with all fields, attached
+photos, and the subject line `New AutoBody SD Lead`.
+
+To **swap the recipient address** (e.g., to a business email) or move to
+FormSubmit's hashed endpoint (to hide the email from page source), edit
+`scripts/wire-form-and-analytics.mjs` and re-run, or do a sitewide find-
+and-replace on `formsubmit.co/davidraymurillo@gmail.com`.
+
+## Analytics (Vercel Analytics)
+
+Page views and custom events ship to Vercel Analytics, which is included
+with the Vercel project. No setup needed beyond visiting the project's
+Analytics tab in the Vercel dashboard once the site has live traffic.
+
+Custom events are wired through `data-track="event_name"` attributes and
+fire via [`assets/analytics.js`](assets/analytics.js). Events tracked:
+`quote_form_started`, `quote_form_submitted`, `damage_type_selected`
+(includes the selected value), `photo_upload_clicked`, `call_clicked`,
+`text_clicked`, `call_or_text_clicked`, `thank_you_page_viewed`.
+
+In local dev (localhost), events log to the browser console instead of
+Vercel — useful for debugging.
+
+## Remaining TODO
+
+- **Specialist brand URLs** — service-page CTAs that route to BumperFix
+  USA, PaintFix USA, CollisionFix USA, CrashFix USA currently use `#`
+  placeholders. Search the repo for `data-route="specialist"` to swap
+  in real URLs when those specialist sites go live.
