@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lead Detail | AutoBody San Diego Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/assets/supabase-config.js"></script>
+  <script src="/assets/admin.js"></script>
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <header class="admin-bar">
+      <div class="wrap admin-bar-row">
+        <a href="/admin/" title="Back to leads"><img src="/assets/header-logo.png" alt="AutoBody San Diego" class="cmd-logo" width="180" height="46"></a>
+        <nav class="admin-bar-nav">
+          <a href="/admin/">&larr; All leads</a>
+          <span id="user-email" class="admin-bar-email"></span>
+          <button id="sign-out">Sign Out</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <div class="wrap">
+        <div id="lead-content">
+          <div class="empty-state"><h3>Loading lead…</h3></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var sb = window.sb;
+
+      function escape(s) {
+        if (s == null) return '';
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      function getParam(name) {
+        var m = new URLSearchParams(window.location.search);
+        return m.get(name);
+      }
+
+      function buildGmailComposeUrl(lead) {
+        // Opens Gmail web compose with To, Subject, and Body pre-filled.
+        // Works on desktop browsers signed into Gmail. Falls back to mailto: if Gmail isn't the user's default.
+        if (!lead.email) return null;
+        var subject = 'Your AutoBody San Diego repair request';
+        var body = [
+          'Hi ' + (lead.name || 'there') + ',',
+          '',
+          'Thanks for sending photos of your ' + window.AdminFmt.vehicleString(lead) + '. ' +
+            'I just reviewed your ' + window.AdminFmt.damageLabel(lead.damage_type).toLowerCase() + ' request.',
+          '',
+          '',
+          '— AutoBody San Diego',
+        ].join('\n');
+        var u = new URL('https://mail.google.com/mail/');
+        u.searchParams.set('view', 'cm');
+        u.searchParams.set('fs', '1');
+        u.searchParams.set('to', lead.email);
+        u.searchParams.set('su', subject);
+        u.searchParams.set('body', body);
+        return u.toString();
+      }
+
+      function buildMailtoUrl(lead) {
+        if (!lead.email) return null;
+        var subject = encodeURIComponent('Your AutoBody San Diego repair request');
+        var body = encodeURIComponent(
+          'Hi ' + (lead.name || 'there') + ',\n\nThanks for sending photos of your ' +
+          window.AdminFmt.vehicleString(lead) + '.\n\n— AutoBody San Diego'
+        );
+        return 'mailto:' + encodeURIComponent(lead.email) + '?subject=' + subject + '&body=' + body;
+      }
+
+      function buildSmsUrl(lead) {
+        if (!lead.phone) return null;
+        return 'sms:' + lead.phone.replace(/[^\d+]/g, '');
+      }
+
+      function buildTelUrl(lead) {
+        if (!lead.phone) return null;
+        return 'tel:' + lead.phone.replace(/[^\d+]/g, '');
+      }
+
+      async function loadPhotos(paths) {
+        if (!paths || !paths.length) return [];
+        // Use signed URLs since the bucket is private
+        var result = [];
+        for (var i = 0; i < paths.length; i++) {
+          var r = await sb.storage
+            .from(window.SUPABASE_CONFIG.photosBucket)
+            .createSignedUrl(paths[i], 3600);
+          if (r.data && r.data.signedUrl) {
+            result.push({ path: paths[i], url: r.data.signedUrl });
+          }
+        }
+        return result;
+      }
+
+      function fieldOrEmpty(v) {
+        if (v == null || v === '') return '<dd class="empty">—</dd>';
+        return '<dd>' + escape(v) + '</dd>';
+      }
+
+      function statusOptions(current) {
+        var opts = ['new','contacted','need_more_photos','needs_inspection','quoted','scheduled','won','lost','bad_lead','out_of_area'];
+        return opts.map(function (s) {
+          return '<option value="' + s + '"' + (s === current ? ' selected' : '') + '>' +
+            window.AdminFmt.statusLabel(s) + '</option>';
+        }).join('');
+      }
+
+      function render(lead, photos) {
+        var html = '<div class="admin-page-head">' +
+          '<div><h1>' + escape(lead.name || 'Unknown') + '</h1>' +
+          '<p>' + window.AdminFmt.statusBadge(lead.status) +
+          '  &nbsp;Received ' + escape(window.AdminFmt.absoluteDate(lead.created_at)) + '</p></div>' +
+          '</div>';
+
+        html += '<div class="detail-grid">';
+
+        // LEFT COLUMN
+        html += '<div>';
+
+        html += '<div class="detail-card"><h2>Contact</h2><dl class="kv">' +
+          '<dt>Name</dt>' + fieldOrEmpty(lead.name) +
+          '<dt>Phone</dt>' + (lead.phone ? '<dd><a href="' + buildTelUrl(lead) + '">' + escape(lead.phone) + '</a></dd>' : '<dd class="empty">—</dd>') +
+          '<dt>Email</dt>' + (lead.email ? '<dd><a href="mailto:' + escape(lead.email) + '">' + escape(lead.email) + '</a></dd>' : '<dd class="empty">—</dd>') +
+          '<dt>Prefers</dt><dd>' + escape(window.AdminFmt.contactLabel(lead.preferred_contact)) + '</dd>' +
+        '</dl></div>';
+
+        html += '<div class="detail-card"><h2>Vehicle &amp; Damage</h2><dl class="kv">' +
+          '<dt>Vehicle</dt>' + fieldOrEmpty(window.AdminFmt.vehicleString(lead)) +
+          '<dt>City</dt>' + fieldOrEmpty(lead.city) +
+          '<dt>Damage type</dt><dd>' + escape(window.AdminFmt.damageLabel(lead.damage_type)) + '</dd>' +
+          '<dt>Pay type</dt><dd>' + escape(window.AdminFmt.payLabel(lead.pay_type)) + '</dd>' +
+          '<dt>Drivable</dt><dd>' + escape(window.AdminFmt.drivableLabel(lead.drivable)) + '</dd>' +
+        '</dl></div>';
+
+        html += '<div class="detail-card"><h2>What Happened</h2>';
+        if (lead.what_happened) {
+          html += '<div class="what-happened">' + escape(lead.what_happened) + '</div>';
+        } else {
+          html += '<p style="color:var(--muted-soft);font-style:italic;">No description provided.</p>';
+        }
+        html += '</div>';
+
+        html += '<div class="detail-card"><h2>Photos (' + photos.length + ')</h2>';
+        if (photos.length) {
+          html += '<div class="photo-grid">';
+          photos.forEach(function (p) {
+            html += '<div class="photo-tile"><a href="' + p.url + '" target="_blank" rel="noopener">' +
+              '<img src="' + p.url + '" alt="Damage photo" loading="lazy"></a></div>';
+          });
+          html += '</div>';
+        } else {
+          html += '<p style="color:var(--muted-soft);font-style:italic;">No photos uploaded.</p>';
+        }
+        html += '</div>';
+
+        html += '</div>'; // /left column
+
+        // RIGHT COLUMN — actions
+        html += '<div>';
+
+        html += '<div class="detail-card"><h2>Reply</h2>';
+        var hasEmail = !!lead.email;
+        var hasPhone = !!lead.phone;
+        html += '<div class="cta-row" style="flex-direction: column; gap: 0.5rem; margin: 0;">';
+        if (hasEmail) {
+          html += '<a class="btn btn-primary" href="' + buildGmailComposeUrl(lead) + '" target="_blank" rel="noopener">Reply via Gmail</a>';
+          html += '<a class="btn btn-ghost btn-sm" href="' + buildMailtoUrl(lead) + '">Reply via default mail app</a>';
+        }
+        if (hasPhone) {
+          html += '<a class="btn btn-ghost" href="' + buildSmsUrl(lead) + '">Text the customer</a>';
+          html += '<a class="btn btn-ghost btn-sm" href="' + buildTelUrl(lead) + '">Call the customer</a>';
+        }
+        if (!hasEmail && !hasPhone) {
+          html += '<p style="color:var(--muted-soft);font-style:italic;">No contact method on this lead.</p>';
+        }
+        html += '</div></div>';
+
+        html += '<div class="detail-card"><h2>Status</h2>' +
+          '<div class="action-block"><label for="status-select">Lead status</label>' +
+          '<select id="status-select">' + statusOptions(lead.status) + '</select>' +
+          '<button id="status-save" class="btn btn-primary btn-block">Save status</button>' +
+          '</div></div>';
+
+        html += '<div class="detail-card"><h2>Internal Notes</h2>' +
+          '<div class="action-block"><label for="notes-textarea">Notes (admin-only)</label>' +
+          '<textarea id="notes-textarea" rows="6" placeholder="Add follow-up details, quotes, supplement amounts, etc.">' + escape(lead.notes || '') + '</textarea>' +
+          '<button id="notes-save" class="btn btn-ghost btn-block">Save notes</button>' +
+          '</div></div>';
+
+        html += '<div class="detail-card"><h2>Lead Metadata</h2><dl class="kv">' +
+          '<dt>Lead ID</dt><dd style="font-family: var(--mono); font-size: 0.78rem; word-break: break-all;">' + escape(lead.id) + '</dd>' +
+          '<dt>Source</dt>' + fieldOrEmpty(lead.source_url) +
+          '<dt>Created</dt><dd>' + escape(window.AdminFmt.absoluteDate(lead.created_at)) + '</dd>' +
+          '<dt>Updated</dt><dd>' + escape(window.AdminFmt.absoluteDate(lead.updated_at)) + '</dd>' +
+        '</dl></div>';
+
+        html += '</div></div>'; // /right column, /grid
+
+        document.getElementById('lead-content').innerHTML = html;
+
+        // Wire actions
+        document.getElementById('status-save').addEventListener('click', async function () {
+          var newStatus = document.getElementById('status-select').value;
+          this.disabled = true;
+          var r = await sb.from('leads').update({ status: newStatus }).eq('id', lead.id);
+          this.disabled = false;
+          if (r.error) {
+            window.AdminToast('Save failed: ' + r.error.message, true);
+          } else {
+            lead.status = newStatus;
+            window.AdminToast('Status updated to ' + window.AdminFmt.statusLabel(newStatus));
+          }
+        });
+
+        document.getElementById('notes-save').addEventListener('click', async function () {
+          var newNotes = document.getElementById('notes-textarea').value;
+          this.disabled = true;
+          var r = await sb.from('leads').update({ notes: newNotes }).eq('id', lead.id);
+          this.disabled = false;
+          if (r.error) {
+            window.AdminToast('Save failed: ' + r.error.message, true);
+          } else {
+            window.AdminToast('Notes saved');
+          }
+        });
+      }
+
+      async function init() {
+        var session = await window.AdminAuth.require();
+        if (!session) return;
+        document.getElementById('user-email').textContent = session.user.email || '';
+        document.getElementById('sign-out').addEventListener('click', window.AdminAuth.signOut);
+
+        var id = getParam('id');
+        if (!id) {
+          document.getElementById('lead-content').innerHTML =
+            '<div class="empty-state"><h3>No lead ID in URL.</h3><a class="btn btn-ghost" href="/admin/">Back to leads</a></div>';
+          return;
+        }
+
+        var r = await sb.from('leads').select('*').eq('id', id).maybeSingle();
+        if (r.error) {
+          document.getElementById('lead-content').innerHTML =
+            '<div class="empty-state"><h3>Couldn\'t load lead.</h3><p>' + escape(r.error.message) + '</p></div>';
+          return;
+        }
+        if (!r.data) {
+          document.getElementById('lead-content').innerHTML =
+            '<div class="empty-state"><h3>Lead not found.</h3><a class="btn btn-ghost" href="/admin/">Back to leads</a></div>';
+          return;
+        }
+        var photos = await loadPhotos(r.data.photo_paths);
+        render(r.data, photos);
+      }
+
+      init();
+    })();
+  </script>
+</body>
+</html>

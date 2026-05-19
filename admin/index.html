@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | AutoBody San Diego</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/assets/supabase-config.js"></script>
+  <script src="/assets/admin.js"></script>
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <header class="admin-bar">
+      <div class="wrap admin-bar-row">
+        <a href="/" title="View public site"><img src="/assets/header-logo.png" alt="AutoBody San Diego" class="cmd-logo" width="180" height="46"></a>
+        <nav class="admin-bar-nav">
+          <a href="/admin/">Leads</a>
+          <a href="https://vercel.com/light-house-wall-of-sea/autobodysandiego-com/analytics" target="_blank" rel="noopener">Analytics &uarr;</a>
+          <span id="user-email" class="admin-bar-email"></span>
+          <button id="sign-out">Sign Out</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <div class="wrap">
+        <div class="admin-page-head">
+          <div>
+            <h1>Leads</h1>
+            <p>Live lead intake from the AutoBody San Diego quote funnel.</p>
+          </div>
+          <a class="btn btn-ghost" href="/get-a-quote" target="_blank" rel="noopener">View public quote form &rarr;</a>
+        </div>
+
+        <div class="stat-grid" id="stat-grid">
+          <div class="stat-card"><div class="stat-label">Total leads</div><div class="stat-value" id="stat-total">—</div></div>
+          <div class="stat-card"><div class="stat-label">New (last 7d)</div><div class="stat-value" id="stat-week">—</div></div>
+          <div class="stat-card"><div class="stat-label">Top damage type</div><div class="stat-value" id="stat-damage" style="font-size: 1.3rem;">—</div></div>
+          <div class="stat-card"><div class="stat-label">Top city</div><div class="stat-value" id="stat-city" style="font-size: 1.3rem;">—</div></div>
+          <div class="stat-card"><div class="stat-label">Open (not won/lost)</div><div class="stat-value" id="stat-open">—</div></div>
+        </div>
+
+        <div class="filter-row" id="filter-row"></div>
+
+        <div class="lead-table-wrap" id="table-wrap">
+          <div class="empty-state"><h3>Loading…</h3></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var sb = window.sb;
+
+      var STATUSES = ['all', 'new', 'contacted', 'need_more_photos', 'needs_inspection', 'quoted', 'scheduled', 'won', 'lost', 'bad_lead', 'out_of_area'];
+      var currentFilter = 'all';
+      var allLeads = [];
+
+      function statusCount(rows, status) {
+        return rows.reduce(function (acc, r) { return acc + (r.status === status ? 1 : 0); }, 0);
+      }
+
+      function topCounter(rows, field, formatter) {
+        var counts = {};
+        rows.forEach(function (r) {
+          var k = r[field];
+          if (!k) return;
+          counts[k] = (counts[k] || 0) + 1;
+        });
+        var top = Object.entries(counts).sort(function (a, b) { return b[1] - a[1]; })[0];
+        if (!top) return '—';
+        return (formatter ? formatter(top[0]) : top[0]) + '  (' + top[1] + ')';
+      }
+
+      function renderStats() {
+        var total = allLeads.length;
+        document.getElementById('stat-total').textContent = total;
+        var weekAgo = new Date(Date.now() - 7 * 86400 * 1000);
+        var week = allLeads.filter(function (r) { return new Date(r.created_at) > weekAgo; }).length;
+        document.getElementById('stat-week').textContent = week;
+        document.getElementById('stat-damage').textContent = topCounter(allLeads, 'damage_type', window.AdminFmt.damageLabel);
+        document.getElementById('stat-city').textContent = topCounter(allLeads, 'city');
+        var openCount = allLeads.filter(function (r) {
+          return r.status !== 'won' && r.status !== 'lost' && r.status !== 'bad_lead';
+        }).length;
+        document.getElementById('stat-open').textContent = openCount;
+      }
+
+      function renderFilters() {
+        var row = document.getElementById('filter-row');
+        row.innerHTML = STATUSES.map(function (s) {
+          var count = s === 'all' ? allLeads.length : statusCount(allLeads, s);
+          var label = s === 'all' ? 'All' : window.AdminFmt.statusLabel(s);
+          return '<button class="filter-pill ' + (s === currentFilter ? 'active' : '') + '" data-status="' + s + '">'
+            + label + ' <span class="count">' + count + '</span></button>';
+        }).join('');
+        row.querySelectorAll('.filter-pill').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            currentFilter = btn.dataset.status;
+            renderFilters();
+            renderTable();
+          });
+        });
+      }
+
+      function renderTable() {
+        var rows = currentFilter === 'all'
+          ? allLeads
+          : allLeads.filter(function (r) { return r.status === currentFilter; });
+
+        var wrap = document.getElementById('table-wrap');
+        if (!rows.length) {
+          wrap.innerHTML = '<div class="empty-state"><h3>No leads ' +
+            (currentFilter === 'all' ? 'yet' : 'in this status') + '.</h3>' +
+            '<p>When customers submit the quote form, they\'ll appear here.</p></div>';
+          return;
+        }
+
+        var html = '<table class="lead-table"><thead><tr>' +
+          '<th>Name &amp; Vehicle</th>' +
+          '<th>Damage</th>' +
+          '<th>City</th>' +
+          '<th>Status</th>' +
+          '<th>Received</th>' +
+        '</tr></thead><tbody>';
+        rows.forEach(function (lead) {
+          html += '<tr class="row-link" data-id="' + lead.id + '">' +
+            '<td><span class="name">' + escape(lead.name || 'Unknown') + '</span>' +
+              '<span class="meta">' + escape(window.AdminFmt.vehicleString(lead)) +
+              (lead.phone ? ' &middot; ' + escape(lead.phone) : '') + '</span></td>' +
+            '<td><span class="damage-badge">' + escape(window.AdminFmt.damageLabel(lead.damage_type)) + '</span></td>' +
+            '<td>' + escape(lead.city || '—') + '</td>' +
+            '<td>' + window.AdminFmt.statusBadge(lead.status) + '</td>' +
+            '<td><span class="when">' + escape(window.AdminFmt.relativeDate(lead.created_at)) + '</span></td>' +
+          '</tr>';
+        });
+        html += '</tbody></table>';
+        wrap.innerHTML = html;
+
+        wrap.querySelectorAll('tr.row-link').forEach(function (tr) {
+          tr.addEventListener('click', function () {
+            window.location.href = '/admin/lead?id=' + tr.dataset.id;
+          });
+        });
+      }
+
+      function escape(s) {
+        if (s == null) return '';
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      async function init() {
+        var session = await window.AdminAuth.require();
+        if (!session) return;
+
+        document.getElementById('user-email').textContent = session.user.email || '';
+        document.getElementById('sign-out').addEventListener('click', window.AdminAuth.signOut);
+
+        var r = await sb.from('leads').select('*').order('created_at', { ascending: false });
+        if (r.error) {
+          document.getElementById('table-wrap').innerHTML =
+            '<div class="empty-state"><h3>Couldn\'t load leads.</h3><p>' + escape(r.error.message) + '</p></div>';
+          return;
+        }
+        allLeads = r.data || [];
+        renderStats();
+        renderFilters();
+        renderTable();
+      }
+
+      init();
+    })();
+  </script>
+</body>
+</html>

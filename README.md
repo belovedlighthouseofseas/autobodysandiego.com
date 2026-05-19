@@ -42,21 +42,48 @@ regenerated.
 node scripts/build-sitemap.mjs
 ```
 
-## Form backend (FormSubmit)
+## Form backend (Supabase)
 
-Forms on `/get-a-quote` and `/contact` post to
-`https://formsubmit.co/davidraymurillo@gmail.com`.
+The quote form on `/get-a-quote` writes directly to Supabase Postgres
+(`leads` table) and uploads photos to Supabase Storage (`lead-photos`
+bucket). Project: `opwpvpxgjgdnfckhxzyu` (autobodysd, us-west-1).
+After successful submission, the visitor is redirected to `/thank-you`.
 
-**One-time activation:** The first time someone submits any form, FormSubmit
-will email davidraymurillo@gmail.com asking to confirm the address. Click
-the confirmation link in that email — once. After that, every future
-submission delivers directly to your inbox with all fields, attached
-photos, and the subject line `New AutoBody SD Lead`.
+The `/contact` form keeps using FormSubmit
+(`https://formsubmit.co/davidraymurillo@gmail.com`) for general messages.
 
-To **swap the recipient address** (e.g., to a business email) or move to
-FormSubmit's hashed endpoint (to hide the email from page source), edit
-`scripts/wire-form-and-analytics.mjs` and re-run, or do a sitewide find-
-and-replace on `formsubmit.co/davidraymurillo@gmail.com`.
+**Photo storage:** private bucket. The admin dashboard fetches signed
+URLs (1-hour expiry) on each view. Anon visitors can only INSERT, never
+read.
+
+## Admin dashboard
+
+Live at `/admin/login`. First-time setup:
+
+1. Visit `/admin/login`
+2. Enter `davidraymurillo@gmail.com` and a password
+3. Click **Create Account (first time)** — Supabase sends a confirmation email
+4. Click the confirmation link
+5. Return to `/admin/login` and sign in
+6. Dashboard at `/admin/` shows lead list, stats, and status filters
+
+Lead detail (`/admin/lead?id=...`) has:
+- Customer contact info + tel:/mailto:/sms: shortcuts
+- Vehicle + damage info
+- "What happened" description
+- Photo grid (signed URLs from private bucket)
+- **Reply via Gmail** button — opens Gmail web compose in a new tab,
+  prefilled with To, Subject, and a starter draft. Sends from your
+  signed-in Gmail.
+- Status dropdown (10 statuses: new → contacted → quoted → won/lost)
+- Admin-only notes field
+
+Admin pages are `noindex`/`nofollow` and disallowed in `robots.txt`.
+RLS policies on the database enforce that only the email on the admin
+allowlist can read/update leads.
+
+See [`docs/session-6-admin-dashboard.md`](docs/session-6-admin-dashboard.md)
+for the full architecture, schema, and operational notes.
 
 ## Analytics (Vercel Analytics)
 

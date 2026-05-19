@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Login | AutoBody San Diego</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/assets/supabase-config.js"></script>
+</head>
+<body class="admin-body">
+  <div class="admin-auth-wrap">
+    <a class="cmd-brand" href="/" style="margin-bottom: 2rem;">
+      <img src="/assets/header-logo.png" alt="AutoBody San Diego" class="cmd-logo" width="180" height="46">
+    </a>
+    <div class="admin-card">
+      <h1 class="admin-h1">Admin Sign In</h1>
+      <p class="admin-sub">Sign in to manage AutoBody San Diego leads.</p>
+
+      <form id="auth-form" class="admin-form">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required minlength="8">
+        </div>
+        <button id="login-btn" class="btn btn-primary btn-block btn-lg" type="submit">Sign In</button>
+        <button id="signup-btn" class="btn btn-ghost btn-block" type="button" style="margin-top: 0.5rem;">Create Account (first time)</button>
+        <p id="auth-msg" class="admin-msg"></p>
+      </form>
+
+      <p class="admin-help">
+        First time setup: click "Create Account" with the admin email
+        (<code>davidraymurillo@gmail.com</code>) and a password you'll remember.
+        Confirm via the email Supabase sends, then sign in.
+      </p>
+    </div>
+    <a href="/" class="admin-footer-link">&larr; Back to site</a>
+  </div>
+
+  <script>
+    (function () {
+      var sb = window.initSupabase();
+      var form = document.getElementById('auth-form');
+      var emailEl = document.getElementById('email');
+      var passEl = document.getElementById('password');
+      var msg = document.getElementById('auth-msg');
+      var loginBtn = document.getElementById('login-btn');
+      var signupBtn = document.getElementById('signup-btn');
+
+      function setMsg(text, isError) {
+        msg.textContent = text || '';
+        msg.style.color = isError ? 'var(--danger-bright)' : 'var(--accent-bright)';
+      }
+
+      // If already signed in, send straight to the dashboard.
+      sb.auth.getSession().then(function (r) {
+        if (r.data && r.data.session) window.location.href = '/admin/';
+      });
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        setMsg('Signing in…');
+        loginBtn.disabled = true;
+        var r = await sb.auth.signInWithPassword({
+          email: emailEl.value.trim(),
+          password: passEl.value,
+        });
+        loginBtn.disabled = false;
+        if (r.error) {
+          setMsg(r.error.message || 'Sign in failed.', true);
+          return;
+        }
+        window.location.href = '/admin/';
+      });
+
+      signupBtn.addEventListener('click', async function () {
+        if (!emailEl.value.trim() || !passEl.value) {
+          setMsg('Enter both email and a password (8+ chars) first.', true);
+          return;
+        }
+        setMsg('Creating account…');
+        signupBtn.disabled = true;
+        var r = await sb.auth.signUp({
+          email: emailEl.value.trim(),
+          password: passEl.value,
+        });
+        signupBtn.disabled = false;
+        if (r.error) {
+          setMsg(r.error.message || 'Signup failed.', true);
+          return;
+        }
+        setMsg('Check your email for a confirmation link, then sign in here.');
+      });
+    })();
+  </script>
+</body>
+</html>

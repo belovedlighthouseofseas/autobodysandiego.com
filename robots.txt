@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /thank-you
 
 Sitemap: https://autobodysandiego.com/sitemap.xml
